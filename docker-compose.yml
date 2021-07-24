@@ -11,8 +11,9 @@ services:
             - "ES_JAVA_OPTS=-Xms1024m -Xmx2048m"
             - discovery.type=single-node
             - TZ=Europe/London
-            - xpack.security.enabled=true
             - xpack.license.self_generated.type=trial
+            - xpack.security.enabled=$ELASTIC_SECURITY
+            - ELASTIC_PASSWORD=$ELASTIC_PASSWORD
         volumes:
             - data01:/usr/share/elasticsearch/data
         ports:
@@ -27,8 +28,11 @@ services:
         ports:
             - 5601:5601
         environment:
-            ELASTICSEARCH_URL: http://elasticsearch:9200
-            ELASTICSEARCH_HOSTS: '["http://elasticsearch:9200"]'
+            - ELASTICSEARCH_URL= http://elasticsearch:9200
+            - ELASTICSEARCH_HOSTS= '["http://elasticsearch:9200"]'
+            - ELASTICSEARCH_USERNAME=elastic
+            - ELASTICSEARCH_PASSWORD=$ELASTIC_PASSWORD
+
         volumes:
             - ./kibana.yml:/usr/share/kibana/config/kibana.yml
         networks:
