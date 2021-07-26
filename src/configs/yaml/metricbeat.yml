@@ -58,7 +58,7 @@ metricbeat.autodiscover:
       templates:
         - condition:
             contains:
-              docker.container.image: todolist-app_frontend
+              docker.container.image: nginx
           config:
             - module: nginx
               metricsets: ["stubstatus"]

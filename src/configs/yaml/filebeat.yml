@@ -88,14 +88,14 @@ filebeat.modules:
     # can be added under this section.
     #input:
 
-#-------------------------------- Apache Module --------------------------------
+#-------------------------------- NGINX Module --------------------------------
 - module: nginx
   access:
     enabled: true
-    var.paths: ["/var/lib/docker/containers/0c481b21c1847b24a227ef7d1e9087ae9f1f089970bc5a1cc5756830039b1900/0c481b21c1847b24a227ef7d1e9087ae9f1f089970bc5a1cc5756830039b1900-json.log"]
+    var.paths: ["/home/sample-app/todolist-app/var/log/nginx/access.log"]
   error:
     enabled: true
-    var.paths: ["/var/lib/docker/containers/0c481b21c1847b24a227ef7d1e9087ae9f1f089970bc5a1cc5756830039b1900/0c481b21c1847b24a227ef7d1e9087ae9f1f089970bc5a1cc5756830039b1900-json.log"]
+    var.paths: ["/home/sample-app/todolist-app/var/log/nginx/error.log"]
 
 # ============================== Filebeat inputs ===============================
 
