@@ -1,0 +1,736 @@
+2020-07-09T18:18:23.158+0100 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-07-09T18:18:23.161+0100 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-07-09T18:18:23.176+0100 W  ASIO     [main] No TransportLayer configured during NetworkInterface startup
+2020-07-09T18:18:23.176+0100 I  CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=mongoH
+2020-07-09T18:18:23.176+0100 I  CONTROL  [initandlisten] db version v4.2.6
+2020-07-09T18:18:23.176+0100 I  CONTROL  [initandlisten] git version: 20364840b8f1af16917e4c23c1b5f5efd8b352f8
+2020-07-09T18:18:23.176+0100 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-07-09T18:18:23.176+0100 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-07-09T18:18:23.176+0100 I  CONTROL  [initandlisten] modules: none
+2020-07-09T18:18:23.176+0100 I  CONTROL  [initandlisten] build environment:
+2020-07-09T18:18:23.176+0100 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-07-09T18:18:23.176+0100 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-07-09T18:18:23.176+0100 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-07-09T18:18:23.176+0100 I  CONTROL  [initandlisten] options: { config: "/etc/mongod.conf", net: { bindIp: "127.0.0.1", port: 27017 }, processManagement: { timeZoneInfo: "/usr/share/zoneinfo" }, security: { authorization: "enabled" }, storage: { dbPath: "/data/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/var/log/mongodb/mongod.log" } }
+2020-07-09T18:18:23.179+0100 I  STORAGE  [initandlisten] 
+2020-07-09T18:18:23.179+0100 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-07-09T18:18:23.179+0100 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-07-09T18:18:23.179+0100 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=4608M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-07-09T18:18:24.068+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315104:68505][1:0x7f6cb7d27b00], txn-recover: Set global recovery timestamp: (0, 0)
+2020-07-09T18:18:24.102+0100 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-07-09T18:18:24.147+0100 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-07-09T18:18:24.158+0100 I  CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2020-07-09T18:18:24.158+0100 I  CONTROL  [initandlisten] 
+2020-07-09T18:18:24.162+0100 I  STORAGE  [initandlisten] createCollection: admin.system.version with provided UUID: 625da872-c493-4828-ae61-011c2a63ffd7 and options: { uuid: UUID("625da872-c493-4828-ae61-011c2a63ffd7") }
+2020-07-09T18:18:24.183+0100 I  INDEX    [initandlisten] index build: done building index _id_ on ns admin.system.version
+2020-07-09T18:18:24.184+0100 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-07-09T18:18:24.184+0100 I  COMMAND  [initandlisten] setting featureCompatibilityVersion to 4.2
+2020-07-09T18:18:24.184+0100 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-07-09T18:18:24.184+0100 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-07-09T18:18:24.184+0100 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-07-09T18:18:24.184+0100 I  STORAGE  [initandlisten] createCollection: local.startup_log with generated UUID: 9ac163c2-ae1d-4df1-aa3b-f6574d3da726 and options: { capped: true, size: 10485760 }
+2020-07-09T18:18:24.215+0100 I  INDEX    [initandlisten] index build: done building index _id_ on ns local.startup_log
+2020-07-09T18:18:24.216+0100 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-07-09T18:18:24.216+0100 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2020-07-09T18:18:24.227+0100 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-07-09T18:18:24.227+0100 I  STORAGE  [LogicalSessionCacheRefresh] createCollection: config.system.sessions with provided UUID: c8ca6977-d2b6-4c8e-a929-dc5e7068e00a and options: { uuid: UUID("c8ca6977-d2b6-4c8e-a929-dc5e7068e00a") }
+2020-07-09T18:18:24.230+0100 I  NETWORK  [listener] Listening on /tmp/mongodb-27017.sock
+2020-07-09T18:18:24.230+0100 I  NETWORK  [listener] Listening on 127.0.0.1
+2020-07-09T18:18:24.230+0100 I  NETWORK  [listener] waiting for connections on port 27017
+2020-07-09T18:18:24.295+0100 I  INDEX    [LogicalSessionCacheRefresh] index build: done building index _id_ on ns config.system.sessions
+2020-07-09T18:18:24.317+0100 I  INDEX    [LogicalSessionCacheRefresh] index build: starting on config.system.sessions properties: { v: 2, key: { lastUse: 1 }, name: "lsidTTLIndex", ns: "config.system.sessions", expireAfterSeconds: 1800 } using method: Hybrid
+2020-07-09T18:18:24.317+0100 I  INDEX    [LogicalSessionCacheRefresh] build may temporarily use up to 200 megabytes of RAM
+2020-07-09T18:18:24.317+0100 I  INDEX    [LogicalSessionCacheRefresh] index build: collection scan done. scanned 0 total records in 0 seconds
+2020-07-09T18:18:24.318+0100 I  INDEX    [LogicalSessionCacheRefresh] index build: inserted 0 keys from external sorter into index in 0 seconds
+2020-07-09T18:18:24.322+0100 I  INDEX    [LogicalSessionCacheRefresh] index build: done building index lsidTTLIndex on ns config.system.sessions
+2020-07-09T18:18:24.327+0100 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2020-07-09T18:18:25.000+0100 I  SHARDING [ftdc] Marking collection local.oplog.rs as collection version: <unsharded>
+2020-07-09T18:21:18.631+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:47076 #1 (1 connection now open)
+2020-07-09T18:21:18.632+0100 I  SHARDING [conn1] Marking collection admin.system.users as collection version: <unsharded>
+2020-07-09T18:21:18.632+0100 I  ACCESS   [conn1] note: no users configured in admin.system.users, allowing localhost access
+2020-07-09T18:21:18.632+0100 I  NETWORK  [conn1] received client metadata from 127.0.0.1:47076 conn1: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.2.6" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "18.04" } }
+2020-07-09T18:21:18.632+0100 I  ACCESS   [conn1] Supported SASL mechanisms requested for unknown user 'root@admin'
+2020-07-09T18:21:18.636+0100 I  ACCESS   [conn1] SASL SCRAM-SHA-1 authentication failed for root on admin from client 127.0.0.1:47076 ; UserNotFound: Could not find user "root" for db "admin"
+2020-07-09T18:21:18.637+0100 I  NETWORK  [conn1] end connection 127.0.0.1:47076 (0 connections now open)
+2020-07-09T18:22:12.851+0100 I  CONTROL  [signalProcessingThread] got signal 15 (Terminated), will terminate after current cmd ends
+2020-07-09T18:22:12.852+0100 I  NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2020-07-09T18:22:12.854+0100 I  NETWORK  [listener] removing socket file: /tmp/mongodb-27017.sock
+2020-07-09T18:22:12.856+0100 I  -        [signalProcessingThread] Stopping further Flow Control ticket acquisitions.
+2020-07-09T18:22:12.856+0100 I  CONTROL  [signalProcessingThread] Shutting down free monitoring
+2020-07-09T18:22:12.857+0100 I  FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2020-07-09T18:22:12.864+0100 I  STORAGE  [signalProcessingThread] Deregistering all the collections
+2020-07-09T18:22:12.864+0100 I  STORAGE  [signalProcessingThread] Timestamp monitor shutting down
+2020-07-09T18:22:12.864+0100 I  STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2020-07-09T18:22:12.866+0100 I  STORAGE  [signalProcessingThread] Shutting down session sweeper thread
+2020-07-09T18:22:12.866+0100 I  STORAGE  [signalProcessingThread] Finished shutting down session sweeper thread
+2020-07-09T18:22:12.866+0100 I  STORAGE  [signalProcessingThread] Shutting down journal flusher thread
+2020-07-09T18:22:12.920+0100 I  STORAGE  [signalProcessingThread] Finished shutting down journal flusher thread
+2020-07-09T18:22:12.920+0100 I  STORAGE  [signalProcessingThread] Shutting down checkpoint thread
+2020-07-09T18:22:12.920+0100 I  STORAGE  [signalProcessingThread] Finished shutting down checkpoint thread
+2020-07-09T18:22:12.947+0100 I  STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2020-07-09T18:22:12.947+0100 I  CONTROL  [signalProcessingThread] now exiting
+2020-07-09T18:22:12.947+0100 I  CONTROL  [signalProcessingThread] shutting down with code:0
+2020-07-09T18:22:42.266+0100 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-07-09T18:22:42.268+0100 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-07-09T18:22:42.298+0100 W  ASIO     [main] No TransportLayer configured during NetworkInterface startup
+2020-07-09T18:22:42.300+0100 I  CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=mongoH
+2020-07-09T18:22:42.301+0100 I  CONTROL  [initandlisten] db version v4.2.6
+2020-07-09T18:22:42.302+0100 I  CONTROL  [initandlisten] git version: 20364840b8f1af16917e4c23c1b5f5efd8b352f8
+2020-07-09T18:22:42.302+0100 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-07-09T18:22:42.302+0100 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-07-09T18:22:42.302+0100 I  CONTROL  [initandlisten] modules: none
+2020-07-09T18:22:42.302+0100 I  CONTROL  [initandlisten] build environment:
+2020-07-09T18:22:42.302+0100 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-07-09T18:22:42.302+0100 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-07-09T18:22:42.302+0100 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-07-09T18:22:42.302+0100 I  CONTROL  [initandlisten] options: { config: "/etc/mongod.conf", net: { bindIp: "127.0.0.1", port: 27017 }, processManagement: { timeZoneInfo: "/usr/share/zoneinfo" }, security: { authorization: "enabled" }, storage: { dbPath: "/data/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/var/log/mongodb/mongod.log" } }
+2020-07-09T18:22:42.303+0100 I  STORAGE  [initandlisten] 
+2020-07-09T18:22:42.303+0100 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-07-09T18:22:42.303+0100 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-07-09T18:22:42.303+0100 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=4608M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-07-09T18:22:43.213+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315363:213095][1:0x7fa50d066b00], txn-recover: Set global recovery timestamp: (0, 0)
+2020-07-09T18:22:43.234+0100 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-07-09T18:22:43.265+0100 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-07-09T18:22:43.523+0100 I  CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2020-07-09T18:22:43.523+0100 I  CONTROL  [initandlisten] 
+2020-07-09T18:22:43.526+0100 I  STORAGE  [initandlisten] createCollection: admin.system.version with provided UUID: 74129338-3117-4a4b-ad0f-090e7547968a and options: { uuid: UUID("74129338-3117-4a4b-ad0f-090e7547968a") }
+2020-07-09T18:22:43.859+0100 I  INDEX    [initandlisten] index build: done building index _id_ on ns admin.system.version
+2020-07-09T18:22:43.860+0100 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-07-09T18:22:43.861+0100 I  COMMAND  [initandlisten] setting featureCompatibilityVersion to 4.2
+2020-07-09T18:22:43.862+0100 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-07-09T18:22:43.862+0100 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-07-09T18:22:43.862+0100 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-07-09T18:22:43.863+0100 I  STORAGE  [initandlisten] createCollection: local.startup_log with generated UUID: 8bcbd350-6afc-4239-bac6-ebd62562435b and options: { capped: true, size: 10485760 }
+2020-07-09T18:22:43.895+0100 I  INDEX    [initandlisten] index build: done building index _id_ on ns local.startup_log
+2020-07-09T18:22:43.895+0100 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-07-09T18:22:43.896+0100 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2020-07-09T18:22:43.920+0100 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-07-09T18:22:43.920+0100 I  CONTROL  [LogicalSessionCacheReap] Sessions collection is not set up; waiting until next sessions reap interval: config.system.sessions does not exist
+2020-07-09T18:22:43.921+0100 I  STORAGE  [LogicalSessionCacheRefresh] createCollection: config.system.sessions with provided UUID: 56932791-566b-4315-8b83-7bb789c8b04d and options: { uuid: UUID("56932791-566b-4315-8b83-7bb789c8b04d") }
+2020-07-09T18:22:43.921+0100 I  NETWORK  [listener] Listening on /tmp/mongodb-27017.sock
+2020-07-09T18:22:43.921+0100 I  NETWORK  [listener] Listening on 127.0.0.1
+2020-07-09T18:22:43.921+0100 I  NETWORK  [listener] waiting for connections on port 27017
+2020-07-09T18:22:43.975+0100 I  INDEX    [LogicalSessionCacheRefresh] index build: done building index _id_ on ns config.system.sessions
+2020-07-09T18:22:44.001+0100 I  SHARDING [ftdc] Marking collection local.oplog.rs as collection version: <unsharded>
+2020-07-09T18:22:44.026+0100 I  INDEX    [LogicalSessionCacheRefresh] index build: starting on config.system.sessions properties: { v: 2, key: { lastUse: 1 }, name: "lsidTTLIndex", ns: "config.system.sessions", expireAfterSeconds: 1800 } using method: Hybrid
+2020-07-09T18:22:44.027+0100 I  INDEX    [LogicalSessionCacheRefresh] build may temporarily use up to 200 megabytes of RAM
+2020-07-09T18:22:44.030+0100 I  INDEX    [LogicalSessionCacheRefresh] index build: collection scan done. scanned 0 total records in 0 seconds
+2020-07-09T18:22:44.031+0100 I  INDEX    [LogicalSessionCacheRefresh] index build: inserted 0 keys from external sorter into index in 0 seconds
+2020-07-09T18:22:44.042+0100 I  INDEX    [LogicalSessionCacheRefresh] index build: done building index lsidTTLIndex on ns config.system.sessions
+2020-07-09T18:22:44.050+0100 I  COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: createIndexes { createIndexes: "system.sessions", indexes: [ { key: { lastUse: 1 }, name: "lsidTTLIndex", expireAfterSeconds: 1800 } ], $db: "config" } numYields:0 reslen:114 locks:{ ParallelBatchWriterMode: { acquireCount: { r: 2 } }, ReplicationStateTransition: { acquireCount: { w: 3 } }, Global: { acquireCount: { r: 1, w: 2 } }, Database: { acquireCount: { r: 1, w: 2, W: 1 } }, Collection: { acquireCount: { r: 4, w: 1, R: 1, W: 2 } }, Mutex: { acquireCount: { r: 3 } } } flowControl:{ acquireCount: 1, timeAcquiringMicros: 1 } storage:{} protocol:op_msg 129ms
+2020-07-09T18:23:31.024+0100 I  CONTROL  [signalProcessingThread] got signal 15 (Terminated), will terminate after current cmd ends
+2020-07-09T18:23:31.030+0100 I  NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2020-07-09T18:23:31.030+0100 I  NETWORK  [listener] removing socket file: /tmp/mongodb-27017.sock
+2020-07-09T18:23:31.030+0100 I  -        [signalProcessingThread] Stopping further Flow Control ticket acquisitions.
+2020-07-09T18:23:31.037+0100 I  CONTROL  [signalProcessingThread] Shutting down free monitoring
+2020-07-09T18:23:31.042+0100 I  FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2020-07-09T18:23:31.052+0100 I  STORAGE  [signalProcessingThread] Deregistering all the collections
+2020-07-09T18:23:31.052+0100 I  STORAGE  [signalProcessingThread] Timestamp monitor shutting down
+2020-07-09T18:23:31.053+0100 I  STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2020-07-09T18:23:31.055+0100 I  STORAGE  [signalProcessingThread] Shutting down session sweeper thread
+2020-07-09T18:23:31.055+0100 I  STORAGE  [signalProcessingThread] Finished shutting down session sweeper thread
+2020-07-09T18:23:31.055+0100 I  STORAGE  [signalProcessingThread] Shutting down journal flusher thread
+2020-07-09T18:23:31.105+0100 I  STORAGE  [signalProcessingThread] Finished shutting down journal flusher thread
+2020-07-09T18:23:31.105+0100 I  STORAGE  [signalProcessingThread] Shutting down checkpoint thread
+2020-07-09T18:23:31.106+0100 I  STORAGE  [signalProcessingThread] Finished shutting down checkpoint thread
+2020-07-09T18:23:31.260+0100 I  STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2020-07-09T18:23:31.260+0100 I  CONTROL  [signalProcessingThread] now exiting
+2020-07-09T18:23:31.260+0100 I  CONTROL  [signalProcessingThread] shutting down with code:0
+2020-07-09T18:23:50.269+0100 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-07-09T18:23:50.273+0100 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-07-09T18:23:50.294+0100 W  ASIO     [main] No TransportLayer configured during NetworkInterface startup
+2020-07-09T18:23:50.295+0100 I  CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=mongoH
+2020-07-09T18:23:50.295+0100 I  CONTROL  [initandlisten] db version v4.2.6
+2020-07-09T18:23:50.295+0100 I  CONTROL  [initandlisten] git version: 20364840b8f1af16917e4c23c1b5f5efd8b352f8
+2020-07-09T18:23:50.295+0100 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-07-09T18:23:50.295+0100 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-07-09T18:23:50.295+0100 I  CONTROL  [initandlisten] modules: none
+2020-07-09T18:23:50.295+0100 I  CONTROL  [initandlisten] build environment:
+2020-07-09T18:23:50.295+0100 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-07-09T18:23:50.295+0100 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-07-09T18:23:50.295+0100 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-07-09T18:23:50.295+0100 I  CONTROL  [initandlisten] options: { config: "/etc/mongod.conf", net: { bindIp: "127.0.0.1,0.0.0.0", port: 27017 }, processManagement: { timeZoneInfo: "/usr/share/zoneinfo" }, security: { authorization: "enabled" }, storage: { dbPath: "/data/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/var/log/mongodb/mongod.log" } }
+2020-07-09T18:23:50.297+0100 I  STORAGE  [initandlisten] 
+2020-07-09T18:23:50.297+0100 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-07-09T18:23:50.297+0100 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-07-09T18:23:50.297+0100 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=4608M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-07-09T18:23:51.683+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315431:683944][1:0x7f8cc3924b00], txn-recover: Set global recovery timestamp: (0, 0)
+2020-07-09T18:23:51.748+0100 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-07-09T18:23:51.799+0100 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-07-09T18:23:51.821+0100 I  CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2020-07-09T18:23:51.822+0100 I  CONTROL  [initandlisten] 
+2020-07-09T18:23:51.823+0100 I  STORAGE  [initandlisten] createCollection: admin.system.version with provided UUID: 0bf79473-e769-4ada-9dd8-1492e9ff6ada and options: { uuid: UUID("0bf79473-e769-4ada-9dd8-1492e9ff6ada") }
+2020-07-09T18:23:51.867+0100 I  INDEX    [initandlisten] index build: done building index _id_ on ns admin.system.version
+2020-07-09T18:23:51.868+0100 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-07-09T18:23:51.868+0100 I  COMMAND  [initandlisten] setting featureCompatibilityVersion to 4.2
+2020-07-09T18:23:51.868+0100 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-07-09T18:23:51.868+0100 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-07-09T18:23:51.868+0100 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-07-09T18:23:51.868+0100 I  STORAGE  [initandlisten] createCollection: local.startup_log with generated UUID: e5b6859e-fd3a-4bda-9103-4351c44aa68d and options: { capped: true, size: 10485760 }
+2020-07-09T18:23:51.923+0100 I  INDEX    [initandlisten] index build: done building index _id_ on ns local.startup_log
+2020-07-09T18:23:51.923+0100 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-07-09T18:23:51.924+0100 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2020-07-09T18:23:51.937+0100 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-07-09T18:23:51.938+0100 I  STORAGE  [LogicalSessionCacheRefresh] createCollection: config.system.sessions with provided UUID: 3ff2d255-2cb3-44bb-b586-8e83c301c89e and options: { uuid: UUID("3ff2d255-2cb3-44bb-b586-8e83c301c89e") }
+2020-07-09T18:23:51.955+0100 I  NETWORK  [listener] Listening on /tmp/mongodb-27017.sock
+2020-07-09T18:23:51.956+0100 I  NETWORK  [listener] Listening on 0.0.0.0
+2020-07-09T18:23:51.956+0100 F  NETWORK  [listener] Error listening for new connections on 127.0.0.1:27017: Address already in use
+2020-07-09T18:23:51.956+0100 F  -        [listener] Fatal Assertion 31339 at src/mongo/transport/transport_layer_asio.cpp 785
+2020-07-09T18:23:51.956+0100 F  -        [listener] 
+
+***aborting after fassert() failure
+
+
+2020-07-09T18:23:51.999+0100 F  -        [listener] Got signal: 6 (Aborted).
+ 0x55f0e7aeb5b1 0x55f0e7aeabcc 0x55f0e7aeac56 0x7f8cc1f56890 0x7f8cc1b91e97 0x7f8cc1b93801 0x55f0e5f46c19 0x55f0e721ce9d 0x55f0e721cf3e 0x55f0e7c1127f 0x7f8cc1f4b6db 0x7f8cc1c7488f
+----- BEGIN BACKTRACE -----
+{"backtrace":[{"b":"55F0E5235000","o":"28B65B1","s":"_ZN5mongo15printStackTraceERSo"},{"b":"55F0E5235000","o":"28B5BCC"},{"b":"55F0E5235000","o":"28B5C56"},{"b":"7F8CC1F44000","o":"12890"},{"b":"7F8CC1B53000","o":"3EE97","s":"gsignal"},{"b":"7F8CC1B53000","o":"40801","s":"abort"},{"b":"55F0E5235000","o":"D11C19","s":"_ZN5mongo32fassertFailedNoTraceWithLocationEiPKcj"},{"b":"55F0E5235000","o":"1FE7E9D","s":"_ZN5mongo9transport18TransportLayerASIO12_runListenerEv"},{"b":"55F0E5235000","o":"1FE7F3E"},{"b":"55F0E5235000","o":"29DC27F"},{"b":"7F8CC1F44000","o":"76DB"},{"b":"7F8CC1B53000","o":"12188F","s":"clone"}],"processInfo":{ "mongodbVersion" : "4.2.6", "gitVersion" : "20364840b8f1af16917e4c23c1b5f5efd8b352f8", "compiledModules" : [], "uname" : { "sysname" : "Linux", "release" : "5.4.0-40-generic", "version" : "#44-Ubuntu SMP Tue Jun 23 00:01:04 UTC 2020", "machine" : "x86_64" }, "somap" : [ { "b" : "55F0E5235000", "elfType" : 3, "buildId" : "66B48B81895E2FEAAB0D26C828C647755EB81440" }, { "b" : "7FFD3A2FA000", "path" : "linux-vdso.so.1", "elfType" : 3, "buildId" : "95A2B69C329CAC2839FAFCA94982B947E15594C0" }, { "b" : "7F8CC3498000", "path" : "/usr/lib/x86_64-linux-gnu/libcurl.so.4", "elfType" : 3, "buildId" : "1C6BC2C0699CE0F7E848CA0B267E0CF07553F6AB" }, { "b" : "7F8CC327D000", "path" : "/lib/x86_64-linux-gnu/libresolv.so.2", "elfType" : 3, "buildId" : "390E9CC4C215314B6D8ADE6D6E28F8518418039C" }, { "b" : "7F8CC2DB2000", "path" : "/usr/lib/x86_64-linux-gnu/libcrypto.so.1.1", "elfType" : 3, "buildId" : "68CECD8742C0C91CDC82709C3E52A8C9F9451FC5" }, { "b" : "7F8CC2B25000", "path" : "/usr/lib/x86_64-linux-gnu/libssl.so.1.1", "elfType" : 3, "buildId" : "38AE5B4499DA422AA6D86BAED1902662DED5F730" }, { "b" : "7F8CC2921000", "path" : "/lib/x86_64-linux-gnu/libdl.so.2", "elfType" : 3, "buildId" : "25AD56E902E23B490A9CCDB08A9744D89CB95BCC" }, { "b" : "7F8CC2719000", "path" : "/lib/x86_64-linux-gnu/librt.so.1", "elfType" : 3, "buildId" : "9826FBDF57ED7D6965131074CB3C08B1009C1CD8" }, { "b" : "7F8CC237B000", "path" : "/lib/x86_64-linux-gnu/libm.so.6", "elfType" : 3, "buildId" : "A33761AB8FB485311B3C85BF4253099D7CABE653" }, { "b" : "7F8CC2163000", "path" : "/lib/x86_64-linux-gnu/libgcc_s.so.1", "elfType" : 3, "buildId" : "679F3AE11120EC7C483BC9295345D836F5C104F7" }, { "b" : "7F8CC1F44000", "path" : "/lib/x86_64-linux-gnu/libpthread.so.0", "elfType" : 3, "buildId" : "28C6AADE70B2D40D1F0F3D0A1A0CAD1AB816448F" }, { "b" : "7F8CC1B53000", "path" : "/lib/x86_64-linux-gnu/libc.so.6", "elfType" : 3, "buildId" : "B417C0BA7CC5CF06D1D1BED6652CEDB9253C60D0" }, { "b" : "7F8CC3717000", "path" : "/lib64/ld-linux-x86-64.so.2", "elfType" : 3, "buildId" : "64DF1B961228382FE18684249ED800AB1DCEAAD4" }, { "b" : "7F8CC192E000", "path" : "/usr/lib/x86_64-linux-gnu/libnghttp2.so.14", "elfType" : 3, "buildId" : "4F00E5207693FDC249DA42EC6472ACA6A7B929AE" }, { "b" : "7F8CC1711000", "path" : "/usr/lib/x86_64-linux-gnu/libidn2.so.0", "elfType" : 3, "buildId" : "EE6E9462BA2491F4EE8C4E52C3323274A9366614" }, { "b" : "7F8CC14F5000", "path" : "/usr/lib/x86_64-linux-gnu/librtmp.so.1", "elfType" : 3, "buildId" : "69465D8AA6B19086ABF2455A703F9168BF82A69F" }, { "b" : "7F8CC12E7000", "path" : "/usr/lib/x86_64-linux-gnu/libpsl.so.5", "elfType" : 3, "buildId" : "CDAF1F1946846941F9D06414EC8C812D131A168E" }, { "b" : "7F8CC109C000", "path" : "/usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2", "elfType" : 3, "buildId" : "00F419F64B0E70D8C5EEF7050369AA40B2A6E090" }, { "b" : "7F8CC0E4A000", "path" : "/usr/lib/x86_64-linux-gnu/libldap_r-2.4.so.2", "elfType" : 3, "buildId" : "70EEF126558D1559A0A4E334FB68E4E9AABE90CB" }, { "b" : "7F8CC0C3C000", "path" : "/usr/lib/x86_64-linux-gnu/liblber-2.4.so.2", "elfType" : 3, "buildId" : "C14042EC7BD22B9A07D2C16563FE3C2606F52AB7" }, { "b" : "7F8CC0A1F000", "path" : "/lib/x86_64-linux-gnu/libz.so.1", "elfType" : 3, "buildId" : "EF3E006DFE3132A41D4D4DC0E407D6EA658E11C4" }, { "b" : "7F8CC06A1000", "path" : "/usr/lib/x86_64-linux-gnu/libunistring.so.2", "elfType" : 3, "buildId" : "0E2784298E7D3F4D894FE130ACEFA77C3E624F72" }, { "b" : "7F8CC033B000", "path" : "/usr/lib/x86_64-linux-gnu/libgnutls.so.30", "elfType" : 3, "buildId" : "1954013F9BBF9FF3A328A8E516481A2BBD8658EB" }, { "b" : "7F8CC0107000", "path" : "/usr/lib/x86_64-linux-gnu/libhogweed.so.4", "elfType" : 3, "buildId" : "842BDF0B0EAAB82E19F1EABFC38769F4040FBE31" }, { "b" : "7F8CBFED1000", "path" : "/usr/lib/x86_64-linux-gnu/libnettle.so.6", "elfType" : 3, "buildId" : "C20D4B3BA13FCDCC3BF6857689BA9FC70BE3F6A5" }, { "b" : "7F8CBFC50000", "path" : "/usr/lib/x86_64-linux-gnu/libgmp.so.10", "elfType" : 3, "buildId" : "D40EA9B5EC5BC46799E4A412319617BD38BE9341" }, { "b" : "7F8CBF97A000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5.so.3", "elfType" : 3, "buildId" : "69FBCF425EE6DF03DE93B82FBC2FC33790E68A96" }, { "b" : "7F8CBF748000", "path" : "/usr/lib/x86_64-linux-gnu/libk5crypto.so.3", "elfType" : 3, "buildId" : "F400D5D643A7F9696DF0E6148FA99BEE6C1BDDF7" }, { "b" : "7F8CBF544000", "path" : "/lib/x86_64-linux-gnu/libcom_err.so.2", "elfType" : 3, "buildId" : "17107881DF65C66B4C6D38CAB37C285FA44663BD" }, { "b" : "7F8CBF339000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5support.so.0", "elfType" : 3, "buildId" : "D78D71E8E016A534281B25B97CD7E5E9DB5FE00A" }, { "b" : "7F8CBF11E000", "path" : "/usr/lib/x86_64-linux-gnu/libsasl2.so.2", "elfType" : 3, "buildId" : "6E98533B96F674F77C1BD83AA3565D974D9C4372" }, { "b" : "7F8CBEEDD000", "path" : "/usr/lib/x86_64-linux-gnu/libgssapi.so.3", "elfType" : 3, "buildId" : "A1A98DB481968073636BBAECB561A3EA8ED198AE" }, { "b" : "7F8CBEBAE000", "path" : "/usr/lib/x86_64-linux-gnu/libp11-kit.so.0", "elfType" : 3, "buildId" : "8DBD451EA5651283905E16FA7DFA9908688893A3" }, { "b" : "7F8CBE99B000", "path" : "/usr/lib/x86_64-linux-gnu/libtasn1.so.6", "elfType" : 3, "buildId" : "6036B89A3BB671B32E01464C0C82BFA016186352" }, { "b" : "7F8CBE797000", "path" : "/lib/x86_64-linux-gnu/libkeyutils.so.1", "elfType" : 3, "buildId" : "F463E107B099910463BC32E837C73D341A52C27B" }, { "b" : "7F8CBE58E000", "path" : "/usr/lib/x86_64-linux-gnu/libheimntlm.so.0", "elfType" : 3, "buildId" : "C2376C5B831991591F1A67B976758185F86896D8" }, { "b" : "7F8CBE301000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5.so.26", "elfType" : 3, "buildId" : "69BDEE5FA0FEEDF317308BE850F78761861D520A" }, { "b" : "7F8CBE05F000", "path" : "/usr/lib/x86_64-linux-gnu/libasn1.so.8", "elfType" : 3, "buildId" : "315D74995AAA32DE4D15BA25F335066988B1B230" }, { "b" : "7F8CBDE29000", "path" : "/usr/lib/x86_64-linux-gnu/libhcrypto.so.4", "elfType" : 3, "buildId" : "6673972A1C24A89EBAFBAE696188A4CB26C6DDEB" }, { "b" : "7F8CBDC13000", "path" : "/usr/lib/x86_64-linux-gnu/libroken.so.18", "elfType" : 3, "buildId" : "430827C33259C12248CF44B91A9A9821114376F5" }, { "b" : "7F8CBDA0B000", "path" : "/usr/lib/x86_64-linux-gnu/libffi.so.6", "elfType" : 3, "buildId" : "3555B5F599C9787DFDDBF9E8DF6F706B9044D985" }, { "b" : "7F8CBD7E2000", "path" : "/usr/lib/x86_64-linux-gnu/libwind.so.0", "elfType" : 3, "buildId" : "93A0931B1C2818F0EA224CE6FE5E31E84A9B55BB" }, { "b" : "7F8CBD5D3000", "path" : "/usr/lib/x86_64-linux-gnu/libheimbase.so.1", "elfType" : 3, "buildId" : "669D4CCE42FA4382796EFFCF0C16F459F4382C4C" }, { "b" : "7F8CBD389000", "path" : "/usr/lib/x86_64-linux-gnu/libhx509.so.5", "elfType" : 3, "buildId" : "4B80C543356EE0AF9039EFE7C9EA1CC1F74C426A" }, { "b" : "7F8CBD080000", "path" : "/usr/lib/x86_64-linux-gnu/libsqlite3.so.0", "elfType" : 3, "buildId" : "66E2050B24B18B3F95154392560A17994D1690F2" }, { "b" : "7F8CBCE48000", "path" : "/lib/x86_64-linux-gnu/libcrypt.so.1", "elfType" : 3, "buildId" : "810686AF0D5FD350A4FB1CC4B5AFF44A05C102CB" } ] }}
+ mongod(_ZN5mongo15printStackTraceERSo+0x41) [0x55f0e7aeb5b1]
+ mongod(+0x28B5BCC) [0x55f0e7aeabcc]
+ mongod(+0x28B5C56) [0x55f0e7aeac56]
+ libpthread.so.0(+0x12890) [0x7f8cc1f56890]
+ libc.so.6(gsignal+0xC7) [0x7f8cc1b91e97]
+ libc.so.6(abort+0x141) [0x7f8cc1b93801]
+ mongod(_ZN5mongo32fassertFailedNoTraceWithLocationEiPKcj+0x0) [0x55f0e5f46c19]
+ mongod(_ZN5mongo9transport18TransportLayerASIO12_runListenerEv+0x82D) [0x55f0e721ce9d]
+ mongod(+0x1FE7F3E) [0x55f0e721cf3e]
+ mongod(+0x29DC27F) [0x55f0e7c1127f]
+ libpthread.so.0(+0x76DB) [0x7f8cc1f4b6db]
+ libc.so.6(clone+0x3F) [0x7f8cc1c7488f]
+-----  END BACKTRACE  -----
+2020-07-09T18:23:57.137+0100 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-07-09T18:23:57.145+0100 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-07-09T18:23:57.203+0100 W  ASIO     [main] No TransportLayer configured during NetworkInterface startup
+2020-07-09T18:23:57.209+0100 I  CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=mongoH
+2020-07-09T18:23:57.210+0100 I  CONTROL  [initandlisten] db version v4.2.6
+2020-07-09T18:23:57.210+0100 I  CONTROL  [initandlisten] git version: 20364840b8f1af16917e4c23c1b5f5efd8b352f8
+2020-07-09T18:23:57.210+0100 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-07-09T18:23:57.212+0100 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-07-09T18:23:57.212+0100 I  CONTROL  [initandlisten] modules: none
+2020-07-09T18:23:57.212+0100 I  CONTROL  [initandlisten] build environment:
+2020-07-09T18:23:57.212+0100 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-07-09T18:23:57.212+0100 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-07-09T18:23:57.212+0100 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-07-09T18:23:57.212+0100 I  CONTROL  [initandlisten] options: { config: "/etc/mongod.conf", net: { bindIp: "127.0.0.1,0.0.0.0", port: 27017 }, processManagement: { timeZoneInfo: "/usr/share/zoneinfo" }, security: { authorization: "enabled" }, storage: { dbPath: "/data/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/var/log/mongodb/mongod.log" } }
+2020-07-09T18:23:57.228+0100 W  STORAGE  [initandlisten] Detected unclean shutdown - /data/db/mongod.lock is not empty.
+2020-07-09T18:23:57.229+0100 I  STORAGE  [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-07-09T18:23:57.229+0100 W  STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2020-07-09T18:23:57.229+0100 I  STORAGE  [initandlisten] 
+2020-07-09T18:23:57.229+0100 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-07-09T18:23:57.229+0100 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-07-09T18:23:57.229+0100 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=4608M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-07-09T18:24:00.865+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315440:864988][1:0x7f039b4a2b00], txn-recover: Main recovery loop: starting at 1/0 to 2/256
+2020-07-09T18:24:00.865+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315440:865766][1:0x7f039b4a2b00], txn-recover: Recovering log 1 through 2
+2020-07-09T18:24:01.372+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315441:372241][1:0x7f039b4a2b00], file:index-3-7895596307774803203.wt, txn-recover: Recovering log 2 through 2
+2020-07-09T18:24:01.709+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315441:709283][1:0x7f039b4a2b00], file:index-3-7895596307774803203.wt, txn-recover: Set global recovery timestamp: (0, 0)
+2020-07-09T18:24:01.829+0100 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-07-09T18:24:01.838+0100 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-07-09T18:24:01.863+0100 I  CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2020-07-09T18:24:01.863+0100 I  CONTROL  [initandlisten] 
+2020-07-09T18:24:01.874+0100 I  STORAGE  [initandlisten] Dropping unknown ident: collection-4-7895596307774803203
+2020-07-09T18:24:01.894+0100 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-07-09T18:24:01.899+0100 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-07-09T18:24:01.899+0100 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-07-09T18:24:01.899+0100 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-07-09T18:24:01.900+0100 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-07-09T18:24:01.900+0100 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2020-07-09T18:24:01.919+0100 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-07-09T18:24:01.919+0100 I  STORAGE  [LogicalSessionCacheRefresh] createCollection: config.system.sessions with provided UUID: 6037ef09-ac03-421a-ad8d-5785c5fe618e and options: { uuid: UUID("6037ef09-ac03-421a-ad8d-5785c5fe618e") }
+2020-07-09T18:24:01.934+0100 I  NETWORK  [listener] Listening on /tmp/mongodb-27017.sock
+2020-07-09T18:24:01.934+0100 I  NETWORK  [listener] Listening on 0.0.0.0
+2020-07-09T18:24:01.934+0100 F  NETWORK  [listener] Error listening for new connections on 127.0.0.1:27017: Address already in use
+2020-07-09T18:24:01.934+0100 F  -        [listener] Fatal Assertion 31339 at src/mongo/transport/transport_layer_asio.cpp 785
+2020-07-09T18:24:01.934+0100 F  -        [listener] 
+
+***aborting after fassert() failure
+
+
+2020-07-09T18:24:02.028+0100 I  INDEX    [LogicalSessionCacheRefresh] index build: done building index _id_ on ns config.system.sessions
+2020-07-09T18:24:02.064+0100 F  -        [listener] Got signal: 6 (Aborted).
+ 0x5623afc635b1 0x5623afc62bcc 0x5623afc62c56 0x7f0399ad4890 0x7f039970fe97 0x7f0399711801 0x5623ae0bec19 0x5623af394e9d 0x5623af394f3e 0x5623afd8927f 0x7f0399ac96db 0x7f03997f288f
+----- BEGIN BACKTRACE -----
+{"backtrace":[{"b":"5623AD3AD000","o":"28B65B1","s":"_ZN5mongo15printStackTraceERSo"},{"b":"5623AD3AD000","o":"28B5BCC"},{"b":"5623AD3AD000","o":"28B5C56"},{"b":"7F0399AC2000","o":"12890"},{"b":"7F03996D1000","o":"3EE97","s":"gsignal"},{"b":"7F03996D1000","o":"40801","s":"abort"},{"b":"5623AD3AD000","o":"D11C19","s":"_ZN5mongo32fassertFailedNoTraceWithLocationEiPKcj"},{"b":"5623AD3AD000","o":"1FE7E9D","s":"_ZN5mongo9transport18TransportLayerASIO12_runListenerEv"},{"b":"5623AD3AD000","o":"1FE7F3E"},{"b":"5623AD3AD000","o":"29DC27F"},{"b":"7F0399AC2000","o":"76DB"},{"b":"7F03996D1000","o":"12188F","s":"clone"}],"processInfo":{ "mongodbVersion" : "4.2.6", "gitVersion" : "20364840b8f1af16917e4c23c1b5f5efd8b352f8", "compiledModules" : [], "uname" : { "sysname" : "Linux", "release" : "5.4.0-40-generic", "version" : "#44-Ubuntu SMP Tue Jun 23 00:01:04 UTC 2020", "machine" : "x86_64" }, "somap" : [ { "b" : "5623AD3AD000", "elfType" : 3, "buildId" : "66B48B81895E2FEAAB0D26C828C647755EB81440" }, { "b" : "7FFEF1FDF000", "path" : "linux-vdso.so.1", "elfType" : 3, "buildId" : "95A2B69C329CAC2839FAFCA94982B947E15594C0" }, { "b" : "7F039B016000", "path" : "/usr/lib/x86_64-linux-gnu/libcurl.so.4", "elfType" : 3, "buildId" : "1C6BC2C0699CE0F7E848CA0B267E0CF07553F6AB" }, { "b" : "7F039ADFB000", "path" : "/lib/x86_64-linux-gnu/libresolv.so.2", "elfType" : 3, "buildId" : "390E9CC4C215314B6D8ADE6D6E28F8518418039C" }, { "b" : "7F039A930000", "path" : "/usr/lib/x86_64-linux-gnu/libcrypto.so.1.1", "elfType" : 3, "buildId" : "68CECD8742C0C91CDC82709C3E52A8C9F9451FC5" }, { "b" : "7F039A6A3000", "path" : "/usr/lib/x86_64-linux-gnu/libssl.so.1.1", "elfType" : 3, "buildId" : "38AE5B4499DA422AA6D86BAED1902662DED5F730" }, { "b" : "7F039A49F000", "path" : "/lib/x86_64-linux-gnu/libdl.so.2", "elfType" : 3, "buildId" : "25AD56E902E23B490A9CCDB08A9744D89CB95BCC" }, { "b" : "7F039A297000", "path" : "/lib/x86_64-linux-gnu/librt.so.1", "elfType" : 3, "buildId" : "9826FBDF57ED7D6965131074CB3C08B1009C1CD8" }, { "b" : "7F0399EF9000", "path" : "/lib/x86_64-linux-gnu/libm.so.6", "elfType" : 3, "buildId" : "A33761AB8FB485311B3C85BF4253099D7CABE653" }, { "b" : "7F0399CE1000", "path" : "/lib/x86_64-linux-gnu/libgcc_s.so.1", "elfType" : 3, "buildId" : "679F3AE11120EC7C483BC9295345D836F5C104F7" }, { "b" : "7F0399AC2000", "path" : "/lib/x86_64-linux-gnu/libpthread.so.0", "elfType" : 3, "buildId" : "28C6AADE70B2D40D1F0F3D0A1A0CAD1AB816448F" }, { "b" : "7F03996D1000", "path" : "/lib/x86_64-linux-gnu/libc.so.6", "elfType" : 3, "buildId" : "B417C0BA7CC5CF06D1D1BED6652CEDB9253C60D0" }, { "b" : "7F039B295000", "path" : "/lib64/ld-linux-x86-64.so.2", "elfType" : 3, "buildId" : "64DF1B961228382FE18684249ED800AB1DCEAAD4" }, { "b" : "7F03994AC000", "path" : "/usr/lib/x86_64-linux-gnu/libnghttp2.so.14", "elfType" : 3, "buildId" : "4F00E5207693FDC249DA42EC6472ACA6A7B929AE" }, { "b" : "7F039928F000", "path" : "/usr/lib/x86_64-linux-gnu/libidn2.so.0", "elfType" : 3, "buildId" : "EE6E9462BA2491F4EE8C4E52C3323274A9366614" }, { "b" : "7F0399073000", "path" : "/usr/lib/x86_64-linux-gnu/librtmp.so.1", "elfType" : 3, "buildId" : "69465D8AA6B19086ABF2455A703F9168BF82A69F" }, { "b" : "7F0398E65000", "path" : "/usr/lib/x86_64-linux-gnu/libpsl.so.5", "elfType" : 3, "buildId" : "CDAF1F1946846941F9D06414EC8C812D131A168E" }, { "b" : "7F0398C1A000", "path" : "/usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2", "elfType" : 3, "buildId" : "00F419F64B0E70D8C5EEF7050369AA40B2A6E090" }, { "b" : "7F03989C8000", "path" : "/usr/lib/x86_64-linux-gnu/libldap_r-2.4.so.2", "elfType" : 3, "buildId" : "70EEF126558D1559A0A4E334FB68E4E9AABE90CB" }, { "b" : "7F03987BA000", "path" : "/usr/lib/x86_64-linux-gnu/liblber-2.4.so.2", "elfType" : 3, "buildId" : "C14042EC7BD22B9A07D2C16563FE3C2606F52AB7" }, { "b" : "7F039859D000", "path" : "/lib/x86_64-linux-gnu/libz.so.1", "elfType" : 3, "buildId" : "EF3E006DFE3132A41D4D4DC0E407D6EA658E11C4" }, { "b" : "7F039821F000", "path" : "/usr/lib/x86_64-linux-gnu/libunistring.so.2", "elfType" : 3, "buildId" : "0E2784298E7D3F4D894FE130ACEFA77C3E624F72" }, { "b" : "7F0397EB9000", "path" : "/usr/lib/x86_64-linux-gnu/libgnutls.so.30", "elfType" : 3, "buildId" : "1954013F9BBF9FF3A328A8E516481A2BBD8658EB" }, { "b" : "7F0397C85000", "path" : "/usr/lib/x86_64-linux-gnu/libhogweed.so.4", "elfType" : 3, "buildId" : "842BDF0B0EAAB82E19F1EABFC38769F4040FBE31" }, { "b" : "7F0397A4F000", "path" : "/usr/lib/x86_64-linux-gnu/libnettle.so.6", "elfType" : 3, "buildId" : "C20D4B3BA13FCDCC3BF6857689BA9FC70BE3F6A5" }, { "b" : "7F03977CE000", "path" : "/usr/lib/x86_64-linux-gnu/libgmp.so.10", "elfType" : 3, "buildId" : "D40EA9B5EC5BC46799E4A412319617BD38BE9341" }, { "b" : "7F03974F8000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5.so.3", "elfType" : 3, "buildId" : "69FBCF425EE6DF03DE93B82FBC2FC33790E68A96" }, { "b" : "7F03972C6000", "path" : "/usr/lib/x86_64-linux-gnu/libk5crypto.so.3", "elfType" : 3, "buildId" : "F400D5D643A7F9696DF0E6148FA99BEE6C1BDDF7" }, { "b" : "7F03970C2000", "path" : "/lib/x86_64-linux-gnu/libcom_err.so.2", "elfType" : 3, "buildId" : "17107881DF65C66B4C6D38CAB37C285FA44663BD" }, { "b" : "7F0396EB7000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5support.so.0", "elfType" : 3, "buildId" : "D78D71E8E016A534281B25B97CD7E5E9DB5FE00A" }, { "b" : "7F0396C9C000", "path" : "/usr/lib/x86_64-linux-gnu/libsasl2.so.2", "elfType" : 3, "buildId" : "6E98533B96F674F77C1BD83AA3565D974D9C4372" }, { "b" : "7F0396A5B000", "path" : "/usr/lib/x86_64-linux-gnu/libgssapi.so.3", "elfType" : 3, "buildId" : "A1A98DB481968073636BBAECB561A3EA8ED198AE" }, { "b" : "7F039672C000", "path" : "/usr/lib/x86_64-linux-gnu/libp11-kit.so.0", "elfType" : 3, "buildId" : "8DBD451EA5651283905E16FA7DFA9908688893A3" }, { "b" : "7F0396519000", "path" : "/usr/lib/x86_64-linux-gnu/libtasn1.so.6", "elfType" : 3, "buildId" : "6036B89A3BB671B32E01464C0C82BFA016186352" }, { "b" : "7F0396315000", "path" : "/lib/x86_64-linux-gnu/libkeyutils.so.1", "elfType" : 3, "buildId" : "F463E107B099910463BC32E837C73D341A52C27B" }, { "b" : "7F039610C000", "path" : "/usr/lib/x86_64-linux-gnu/libheimntlm.so.0", "elfType" : 3, "buildId" : "C2376C5B831991591F1A67B976758185F86896D8" }, { "b" : "7F0395E7F000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5.so.26", "elfType" : 3, "buildId" : "69BDEE5FA0FEEDF317308BE850F78761861D520A" }, { "b" : "7F0395BDD000", "path" : "/usr/lib/x86_64-linux-gnu/libasn1.so.8", "elfType" : 3, "buildId" : "315D74995AAA32DE4D15BA25F335066988B1B230" }, { "b" : "7F03959A7000", "path" : "/usr/lib/x86_64-linux-gnu/libhcrypto.so.4", "elfType" : 3, "buildId" : "6673972A1C24A89EBAFBAE696188A4CB26C6DDEB" }, { "b" : "7F0395791000", "path" : "/usr/lib/x86_64-linux-gnu/libroken.so.18", "elfType" : 3, "buildId" : "430827C33259C12248CF44B91A9A9821114376F5" }, { "b" : "7F0395589000", "path" : "/usr/lib/x86_64-linux-gnu/libffi.so.6", "elfType" : 3, "buildId" : "3555B5F599C9787DFDDBF9E8DF6F706B9044D985" }, { "b" : "7F0395360000", "path" : "/usr/lib/x86_64-linux-gnu/libwind.so.0", "elfType" : 3, "buildId" : "93A0931B1C2818F0EA224CE6FE5E31E84A9B55BB" }, { "b" : "7F0395151000", "path" : "/usr/lib/x86_64-linux-gnu/libheimbase.so.1", "elfType" : 3, "buildId" : "669D4CCE42FA4382796EFFCF0C16F459F4382C4C" }, { "b" : "7F0394F07000", "path" : "/usr/lib/x86_64-linux-gnu/libhx509.so.5", "elfType" : 3, "buildId" : "4B80C543356EE0AF9039EFE7C9EA1CC1F74C426A" }, { "b" : "7F0394BFE000", "path" : "/usr/lib/x86_64-linux-gnu/libsqlite3.so.0", "elfType" : 3, "buildId" : "66E2050B24B18B3F95154392560A17994D1690F2" }, { "b" : "7F03949C6000", "path" : "/lib/x86_64-linux-gnu/libcrypt.so.1", "elfType" : 3, "buildId" : "810686AF0D5FD350A4FB1CC4B5AFF44A05C102CB" } ] }}
+ mongod(_ZN5mongo15printStackTraceERSo+0x41) [0x5623afc635b1]
+ mongod(+0x28B5BCC) [0x5623afc62bcc]
+ mongod(+0x28B5C56) [0x5623afc62c56]
+ libpthread.so.0(+0x12890) [0x7f0399ad4890]
+ libc.so.6(gsignal+0xC7) [0x7f039970fe97]
+ libc.so.6(abort+0x141) [0x7f0399711801]
+ mongod(_ZN5mongo32fassertFailedNoTraceWithLocationEiPKcj+0x0) [0x5623ae0bec19]
+ mongod(_ZN5mongo9transport18TransportLayerASIO12_runListenerEv+0x82D) [0x5623af394e9d]
+ mongod(+0x1FE7F3E) [0x5623af394f3e]
+ mongod(+0x29DC27F) [0x5623afd8927f]
+ libpthread.so.0(+0x76DB) [0x7f0399ac96db]
+ libc.so.6(clone+0x3F) [0x7f03997f288f]
+-----  END BACKTRACE  -----
+2020-07-09T18:24:06.007+0100 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-07-09T18:24:06.012+0100 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-07-09T18:24:06.089+0100 W  ASIO     [main] No TransportLayer configured during NetworkInterface startup
+2020-07-09T18:24:06.097+0100 I  CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=mongoH
+2020-07-09T18:24:06.097+0100 I  CONTROL  [initandlisten] db version v4.2.6
+2020-07-09T18:24:06.097+0100 I  CONTROL  [initandlisten] git version: 20364840b8f1af16917e4c23c1b5f5efd8b352f8
+2020-07-09T18:24:06.097+0100 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-07-09T18:24:06.097+0100 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-07-09T18:24:06.097+0100 I  CONTROL  [initandlisten] modules: none
+2020-07-09T18:24:06.097+0100 I  CONTROL  [initandlisten] build environment:
+2020-07-09T18:24:06.097+0100 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-07-09T18:24:06.097+0100 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-07-09T18:24:06.097+0100 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-07-09T18:24:06.097+0100 I  CONTROL  [initandlisten] options: { config: "/etc/mongod.conf", net: { bindIp: "127.0.0.1,0.0.0.0", port: 27017 }, processManagement: { timeZoneInfo: "/usr/share/zoneinfo" }, security: { authorization: "enabled" }, storage: { dbPath: "/data/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/var/log/mongodb/mongod.log" } }
+2020-07-09T18:24:06.107+0100 W  STORAGE  [initandlisten] Detected unclean shutdown - /data/db/mongod.lock is not empty.
+2020-07-09T18:24:06.107+0100 I  STORAGE  [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-07-09T18:24:06.107+0100 W  STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2020-07-09T18:24:06.107+0100 I  STORAGE  [initandlisten] 
+2020-07-09T18:24:06.107+0100 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-07-09T18:24:06.107+0100 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-07-09T18:24:06.107+0100 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=4608M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-07-09T18:24:08.064+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315448:64882][1:0x7fa18d0abb00], txn-recover: Recovering log 2 through 3
+2020-07-09T18:24:08.303+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315448:302992][1:0x7fa18d0abb00], txn-recover: Recovering log 3 through 3
+2020-07-09T18:24:08.695+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315448:695069][1:0x7fa18d0abb00], txn-recover: Main recovery loop: starting at 2/256 to 3/256
+2020-07-09T18:24:08.695+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315448:695824][1:0x7fa18d0abb00], txn-recover: Recovering log 2 through 3
+2020-07-09T18:24:09.007+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315449:7642][1:0x7fa18d0abb00], file:_mdb_catalog.wt, txn-recover: Recovering log 3 through 3
+2020-07-09T18:24:09.232+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315449:232365][1:0x7fa18d0abb00], file:_mdb_catalog.wt, txn-recover: Set global recovery timestamp: (0, 0)
+2020-07-09T18:24:09.496+0100 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-07-09T18:24:09.595+0100 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-07-09T18:24:09.631+0100 I  CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2020-07-09T18:24:09.631+0100 I  CONTROL  [initandlisten] 
+2020-07-09T18:24:09.632+0100 I  STORAGE  [initandlisten] Dropping unknown ident: index-2--8271036476084781528
+2020-07-09T18:24:09.663+0100 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-07-09T18:24:09.665+0100 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-07-09T18:24:09.665+0100 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-07-09T18:24:09.665+0100 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-07-09T18:24:09.671+0100 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-07-09T18:24:09.672+0100 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2020-07-09T18:24:09.677+0100 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-07-09T18:24:09.679+0100 I  NETWORK  [listener] Listening on /tmp/mongodb-27017.sock
+2020-07-09T18:24:09.696+0100 I  NETWORK  [listener] Listening on 0.0.0.0
+2020-07-09T18:24:09.696+0100 F  NETWORK  [listener] Error listening for new connections on 127.0.0.1:27017: Address already in use
+2020-07-09T18:24:09.696+0100 F  -        [listener] Fatal Assertion 31339 at src/mongo/transport/transport_layer_asio.cpp 785
+2020-07-09T18:24:09.696+0100 F  -        [listener] 
+
+***aborting after fassert() failure
+
+
+2020-07-09T18:24:09.760+0100 I  INDEX    [LogicalSessionCacheRefresh] index build: starting on config.system.sessions properties: { v: 2, key: { lastUse: 1 }, name: "lsidTTLIndex", ns: "config.system.sessions", expireAfterSeconds: 1800 } using method: Hybrid
+2020-07-09T18:24:09.760+0100 I  INDEX    [LogicalSessionCacheRefresh] build may temporarily use up to 200 megabytes of RAM
+2020-07-09T18:24:09.764+0100 I  INDEX    [LogicalSessionCacheRefresh] index build: collection scan done. scanned 0 total records in 0 seconds
+2020-07-09T18:24:09.765+0100 I  INDEX    [LogicalSessionCacheRefresh] index build: inserted 0 keys from external sorter into index in 0 seconds
+2020-07-09T18:24:09.780+0100 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2020-07-09T18:24:09.782+0100 I  INDEX    [LogicalSessionCacheRefresh] index build: done building index lsidTTLIndex on ns config.system.sessions
+2020-07-09T18:24:09.787+0100 F  -        [listener] Got signal: 6 (Aborted).
+ 0x55b2a19035b1 0x55b2a1902bcc 0x55b2a1902c56 0x7fa18b6dd890 0x7fa18b318e97 0x7fa18b31a801 0x55b29fd5ec19 0x55b2a1034e9d 0x55b2a1034f3e 0x55b2a1a2927f 0x7fa18b6d26db 0x7fa18b3fb88f
+----- BEGIN BACKTRACE -----
+{"backtrace":[{"b":"55B29F04D000","o":"28B65B1","s":"_ZN5mongo15printStackTraceERSo"},{"b":"55B29F04D000","o":"28B5BCC"},{"b":"55B29F04D000","o":"28B5C56"},{"b":"7FA18B6CB000","o":"12890"},{"b":"7FA18B2DA000","o":"3EE97","s":"gsignal"},{"b":"7FA18B2DA000","o":"40801","s":"abort"},{"b":"55B29F04D000","o":"D11C19","s":"_ZN5mongo32fassertFailedNoTraceWithLocationEiPKcj"},{"b":"55B29F04D000","o":"1FE7E9D","s":"_ZN5mongo9transport18TransportLayerASIO12_runListenerEv"},{"b":"55B29F04D000","o":"1FE7F3E"},{"b":"55B29F04D000","o":"29DC27F"},{"b":"7FA18B6CB000","o":"76DB"},{"b":"7FA18B2DA000","o":"12188F","s":"clone"}],"processInfo":{ "mongodbVersion" : "4.2.6", "gitVersion" : "20364840b8f1af16917e4c23c1b5f5efd8b352f8", "compiledModules" : [], "uname" : { "sysname" : "Linux", "release" : "5.4.0-40-generic", "version" : "#44-Ubuntu SMP Tue Jun 23 00:01:04 UTC 2020", "machine" : "x86_64" }, "somap" : [ { "b" : "55B29F04D000", "elfType" : 3, "buildId" : "66B48B81895E2FEAAB0D26C828C647755EB81440" }, { "b" : "7FFD885DC000", "path" : "linux-vdso.so.1", "elfType" : 3, "buildId" : "95A2B69C329CAC2839FAFCA94982B947E15594C0" }, { "b" : "7FA18CC1F000", "path" : "/usr/lib/x86_64-linux-gnu/libcurl.so.4", "elfType" : 3, "buildId" : "1C6BC2C0699CE0F7E848CA0B267E0CF07553F6AB" }, { "b" : "7FA18CA04000", "path" : "/lib/x86_64-linux-gnu/libresolv.so.2", "elfType" : 3, "buildId" : "390E9CC4C215314B6D8ADE6D6E28F8518418039C" }, { "b" : "7FA18C539000", "path" : "/usr/lib/x86_64-linux-gnu/libcrypto.so.1.1", "elfType" : 3, "buildId" : "68CECD8742C0C91CDC82709C3E52A8C9F9451FC5" }, { "b" : "7FA18C2AC000", "path" : "/usr/lib/x86_64-linux-gnu/libssl.so.1.1", "elfType" : 3, "buildId" : "38AE5B4499DA422AA6D86BAED1902662DED5F730" }, { "b" : "7FA18C0A8000", "path" : "/lib/x86_64-linux-gnu/libdl.so.2", "elfType" : 3, "buildId" : "25AD56E902E23B490A9CCDB08A9744D89CB95BCC" }, { "b" : "7FA18BEA0000", "path" : "/lib/x86_64-linux-gnu/librt.so.1", "elfType" : 3, "buildId" : "9826FBDF57ED7D6965131074CB3C08B1009C1CD8" }, { "b" : "7FA18BB02000", "path" : "/lib/x86_64-linux-gnu/libm.so.6", "elfType" : 3, "buildId" : "A33761AB8FB485311B3C85BF4253099D7CABE653" }, { "b" : "7FA18B8EA000", "path" : "/lib/x86_64-linux-gnu/libgcc_s.so.1", "elfType" : 3, "buildId" : "679F3AE11120EC7C483BC9295345D836F5C104F7" }, { "b" : "7FA18B6CB000", "path" : "/lib/x86_64-linux-gnu/libpthread.so.0", "elfType" : 3, "buildId" : "28C6AADE70B2D40D1F0F3D0A1A0CAD1AB816448F" }, { "b" : "7FA18B2DA000", "path" : "/lib/x86_64-linux-gnu/libc.so.6", "elfType" : 3, "buildId" : "B417C0BA7CC5CF06D1D1BED6652CEDB9253C60D0" }, { "b" : "7FA18CE9E000", "path" : "/lib64/ld-linux-x86-64.so.2", "elfType" : 3, "buildId" : "64DF1B961228382FE18684249ED800AB1DCEAAD4" }, { "b" : "7FA18B0B5000", "path" : "/usr/lib/x86_64-linux-gnu/libnghttp2.so.14", "elfType" : 3, "buildId" : "4F00E5207693FDC249DA42EC6472ACA6A7B929AE" }, { "b" : "7FA18AE98000", "path" : "/usr/lib/x86_64-linux-gnu/libidn2.so.0", "elfType" : 3, "buildId" : "EE6E9462BA2491F4EE8C4E52C3323274A9366614" }, { "b" : "7FA18AC7C000", "path" : "/usr/lib/x86_64-linux-gnu/librtmp.so.1", "elfType" : 3, "buildId" : "69465D8AA6B19086ABF2455A703F9168BF82A69F" }, { "b" : "7FA18AA6E000", "path" : "/usr/lib/x86_64-linux-gnu/libpsl.so.5", "elfType" : 3, "buildId" : "CDAF1F1946846941F9D06414EC8C812D131A168E" }, { "b" : "7FA18A823000", "path" : "/usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2", "elfType" : 3, "buildId" : "00F419F64B0E70D8C5EEF7050369AA40B2A6E090" }, { "b" : "7FA18A5D1000", "path" : "/usr/lib/x86_64-linux-gnu/libldap_r-2.4.so.2", "elfType" : 3, "buildId" : "70EEF126558D1559A0A4E334FB68E4E9AABE90CB" }, { "b" : "7FA18A3C3000", "path" : "/usr/lib/x86_64-linux-gnu/liblber-2.4.so.2", "elfType" : 3, "buildId" : "C14042EC7BD22B9A07D2C16563FE3C2606F52AB7" }, { "b" : "7FA18A1A6000", "path" : "/lib/x86_64-linux-gnu/libz.so.1", "elfType" : 3, "buildId" : "EF3E006DFE3132A41D4D4DC0E407D6EA658E11C4" }, { "b" : "7FA189E28000", "path" : "/usr/lib/x86_64-linux-gnu/libunistring.so.2", "elfType" : 3, "buildId" : "0E2784298E7D3F4D894FE130ACEFA77C3E624F72" }, { "b" : "7FA189AC2000", "path" : "/usr/lib/x86_64-linux-gnu/libgnutls.so.30", "elfType" : 3, "buildId" : "1954013F9BBF9FF3A328A8E516481A2BBD8658EB" }, { "b" : "7FA18988E000", "path" : "/usr/lib/x86_64-linux-gnu/libhogweed.so.4", "elfType" : 3, "buildId" : "842BDF0B0EAAB82E19F1EABFC38769F4040FBE31" }, { "b" : "7FA189658000", "path" : "/usr/lib/x86_64-linux-gnu/libnettle.so.6", "elfType" : 3, "buildId" : "C20D4B3BA13FCDCC3BF6857689BA9FC70BE3F6A5" }, { "b" : "7FA1893D7000", "path" : "/usr/lib/x86_64-linux-gnu/libgmp.so.10", "elfType" : 3, "buildId" : "D40EA9B5EC5BC46799E4A412319617BD38BE9341" }, { "b" : "7FA189101000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5.so.3", "elfType" : 3, "buildId" : "69FBCF425EE6DF03DE93B82FBC2FC33790E68A96" }, { "b" : "7FA188ECF000", "path" : "/usr/lib/x86_64-linux-gnu/libk5crypto.so.3", "elfType" : 3, "buildId" : "F400D5D643A7F9696DF0E6148FA99BEE6C1BDDF7" }, { "b" : "7FA188CCB000", "path" : "/lib/x86_64-linux-gnu/libcom_err.so.2", "elfType" : 3, "buildId" : "17107881DF65C66B4C6D38CAB37C285FA44663BD" }, { "b" : "7FA188AC0000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5support.so.0", "elfType" : 3, "buildId" : "D78D71E8E016A534281B25B97CD7E5E9DB5FE00A" }, { "b" : "7FA1888A5000", "path" : "/usr/lib/x86_64-linux-gnu/libsasl2.so.2", "elfType" : 3, "buildId" : "6E98533B96F674F77C1BD83AA3565D974D9C4372" }, { "b" : "7FA188664000", "path" : "/usr/lib/x86_64-linux-gnu/libgssapi.so.3", "elfType" : 3, "buildId" : "A1A98DB481968073636BBAECB561A3EA8ED198AE" }, { "b" : "7FA188335000", "path" : "/usr/lib/x86_64-linux-gnu/libp11-kit.so.0", "elfType" : 3, "buildId" : "8DBD451EA5651283905E16FA7DFA9908688893A3" }, { "b" : "7FA188122000", "path" : "/usr/lib/x86_64-linux-gnu/libtasn1.so.6", "elfType" : 3, "buildId" : "6036B89A3BB671B32E01464C0C82BFA016186352" }, { "b" : "7FA187F1E000", "path" : "/lib/x86_64-linux-gnu/libkeyutils.so.1", "elfType" : 3, "buildId" : "F463E107B099910463BC32E837C73D341A52C27B" }, { "b" : "7FA187D15000", "path" : "/usr/lib/x86_64-linux-gnu/libheimntlm.so.0", "elfType" : 3, "buildId" : "C2376C5B831991591F1A67B976758185F86896D8" }, { "b" : "7FA187A88000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5.so.26", "elfType" : 3, "buildId" : "69BDEE5FA0FEEDF317308BE850F78761861D520A" }, { "b" : "7FA1877E6000", "path" : "/usr/lib/x86_64-linux-gnu/libasn1.so.8", "elfType" : 3, "buildId" : "315D74995AAA32DE4D15BA25F335066988B1B230" }, { "b" : "7FA1875B0000", "path" : "/usr/lib/x86_64-linux-gnu/libhcrypto.so.4", "elfType" : 3, "buildId" : "6673972A1C24A89EBAFBAE696188A4CB26C6DDEB" }, { "b" : "7FA18739A000", "path" : "/usr/lib/x86_64-linux-gnu/libroken.so.18", "elfType" : 3, "buildId" : "430827C33259C12248CF44B91A9A9821114376F5" }, { "b" : "7FA187192000", "path" : "/usr/lib/x86_64-linux-gnu/libffi.so.6", "elfType" : 3, "buildId" : "3555B5F599C9787DFDDBF9E8DF6F706B9044D985" }, { "b" : "7FA186F69000", "path" : "/usr/lib/x86_64-linux-gnu/libwind.so.0", "elfType" : 3, "buildId" : "93A0931B1C2818F0EA224CE6FE5E31E84A9B55BB" }, { "b" : "7FA186D5A000", "path" : "/usr/lib/x86_64-linux-gnu/libheimbase.so.1", "elfType" : 3, "buildId" : "669D4CCE42FA4382796EFFCF0C16F459F4382C4C" }, { "b" : "7FA186B10000", "path" : "/usr/lib/x86_64-linux-gnu/libhx509.so.5", "elfType" : 3, "buildId" : "4B80C543356EE0AF9039EFE7C9EA1CC1F74C426A" }, { "b" : "7FA186807000", "path" : "/usr/lib/x86_64-linux-gnu/libsqlite3.so.0", "elfType" : 3, "buildId" : "66E2050B24B18B3F95154392560A17994D1690F2" }, { "b" : "7FA1865CF000", "path" : "/lib/x86_64-linux-gnu/libcrypt.so.1", "elfType" : 3, "buildId" : "810686AF0D5FD350A4FB1CC4B5AFF44A05C102CB" } ] }}
+ mongod(_ZN5mongo15printStackTraceERSo+0x41) [0x55b2a19035b1]
+ mongod(+0x28B5BCC) [0x55b2a1902bcc]
+ mongod(+0x28B5C56) [0x55b2a1902c56]
+ libpthread.so.0(+0x12890) [0x7fa18b6dd890]
+ libc.so.6(gsignal+0xC7) [0x7fa18b318e97]
+ libc.so.6(abort+0x141) [0x7fa18b31a801]
+ mongod(_ZN5mongo32fassertFailedNoTraceWithLocationEiPKcj+0x0) [0x55b29fd5ec19]
+ mongod(_ZN5mongo9transport18TransportLayerASIO12_runListenerEv+0x82D) [0x55b2a1034e9d]
+ mongod(+0x1FE7F3E) [0x55b2a1034f3e]
+ mongod(+0x29DC27F) [0x55b2a1a2927f]
+ libpthread.so.0(+0x76DB) [0x7fa18b6d26db]
+ libc.so.6(clone+0x3F) [0x7fa18b3fb88f]
+-----  END BACKTRACE  -----
+2020-07-09T18:24:14.311+0100 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-07-09T18:24:14.322+0100 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-07-09T18:24:14.393+0100 W  ASIO     [main] No TransportLayer configured during NetworkInterface startup
+2020-07-09T18:24:14.394+0100 I  CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=mongoH
+2020-07-09T18:24:14.394+0100 I  CONTROL  [initandlisten] db version v4.2.6
+2020-07-09T18:24:14.394+0100 I  CONTROL  [initandlisten] git version: 20364840b8f1af16917e4c23c1b5f5efd8b352f8
+2020-07-09T18:24:14.394+0100 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-07-09T18:24:14.394+0100 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-07-09T18:24:14.394+0100 I  CONTROL  [initandlisten] modules: none
+2020-07-09T18:24:14.394+0100 I  CONTROL  [initandlisten] build environment:
+2020-07-09T18:24:14.394+0100 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-07-09T18:24:14.394+0100 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-07-09T18:24:14.394+0100 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-07-09T18:24:14.396+0100 I  CONTROL  [initandlisten] options: { config: "/etc/mongod.conf", net: { bindIp: "127.0.0.1,0.0.0.0", port: 27017 }, processManagement: { timeZoneInfo: "/usr/share/zoneinfo" }, security: { authorization: "enabled" }, storage: { dbPath: "/data/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/var/log/mongodb/mongod.log" } }
+2020-07-09T18:24:14.398+0100 W  STORAGE  [initandlisten] Detected unclean shutdown - /data/db/mongod.lock is not empty.
+2020-07-09T18:24:14.398+0100 I  STORAGE  [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-07-09T18:24:14.398+0100 W  STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2020-07-09T18:24:14.398+0100 I  STORAGE  [initandlisten] 
+2020-07-09T18:24:14.398+0100 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-07-09T18:24:14.398+0100 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-07-09T18:24:14.398+0100 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=4608M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-07-09T18:24:16.267+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315456:267226][1:0x7fdf57bf7b00], txn-recover: Recovering log 3 through 4
+2020-07-09T18:24:16.420+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315456:420722][1:0x7fdf57bf7b00], txn-recover: Recovering log 4 through 4
+2020-07-09T18:24:16.685+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315456:685246][1:0x7fdf57bf7b00], txn-recover: Main recovery loop: starting at 3/256 to 4/256
+2020-07-09T18:24:16.685+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315456:685934][1:0x7fdf57bf7b00], txn-recover: Recovering log 3 through 4
+2020-07-09T18:24:16.889+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315456:889730][1:0x7fdf57bf7b00], file:_mdb_catalog.wt, txn-recover: Recovering log 4 through 4
+2020-07-09T18:24:17.129+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315457:129141][1:0x7fdf57bf7b00], file:_mdb_catalog.wt, txn-recover: Set global recovery timestamp: (0, 0)
+2020-07-09T18:24:17.295+0100 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-07-09T18:24:17.312+0100 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-07-09T18:24:17.326+0100 I  CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2020-07-09T18:24:17.326+0100 I  CONTROL  [initandlisten] 
+2020-07-09T18:24:17.348+0100 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-07-09T18:24:17.365+0100 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-07-09T18:24:17.365+0100 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-07-09T18:24:17.365+0100 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-07-09T18:24:17.365+0100 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-07-09T18:24:17.367+0100 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2020-07-09T18:24:17.377+0100 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-07-09T18:24:17.379+0100 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2020-07-09T18:24:17.379+0100 I  NETWORK  [listener] Listening on /tmp/mongodb-27017.sock
+2020-07-09T18:24:17.379+0100 I  NETWORK  [listener] Listening on 0.0.0.0
+2020-07-09T18:24:17.379+0100 F  NETWORK  [listener] Error listening for new connections on 127.0.0.1:27017: Address already in use
+2020-07-09T18:24:17.379+0100 F  -        [listener] Fatal Assertion 31339 at src/mongo/transport/transport_layer_asio.cpp 785
+2020-07-09T18:24:17.380+0100 F  -        [listener] 
+
+***aborting after fassert() failure
+
+
+2020-07-09T18:24:17.401+0100 F  -        [listener] Got signal: 6 (Aborted).
+ 0x56211496d5b1 0x56211496cbcc 0x56211496cc56 0x7fdf56229890 0x7fdf55e64e97 0x7fdf55e66801 0x562112dc8c19 0x56211409ee9d 0x56211409ef3e 0x562114a9327f 0x7fdf5621e6db 0x7fdf55f4788f
+----- BEGIN BACKTRACE -----
+{"backtrace":[{"b":"5621120B7000","o":"28B65B1","s":"_ZN5mongo15printStackTraceERSo"},{"b":"5621120B7000","o":"28B5BCC"},{"b":"5621120B7000","o":"28B5C56"},{"b":"7FDF56217000","o":"12890"},{"b":"7FDF55E26000","o":"3EE97","s":"gsignal"},{"b":"7FDF55E26000","o":"40801","s":"abort"},{"b":"5621120B7000","o":"D11C19","s":"_ZN5mongo32fassertFailedNoTraceWithLocationEiPKcj"},{"b":"5621120B7000","o":"1FE7E9D","s":"_ZN5mongo9transport18TransportLayerASIO12_runListenerEv"},{"b":"5621120B7000","o":"1FE7F3E"},{"b":"5621120B7000","o":"29DC27F"},{"b":"7FDF56217000","o":"76DB"},{"b":"7FDF55E26000","o":"12188F","s":"clone"}],"processInfo":{ "mongodbVersion" : "4.2.6", "gitVersion" : "20364840b8f1af16917e4c23c1b5f5efd8b352f8", "compiledModules" : [], "uname" : { "sysname" : "Linux", "release" : "5.4.0-40-generic", "version" : "#44-Ubuntu SMP Tue Jun 23 00:01:04 UTC 2020", "machine" : "x86_64" }, "somap" : [ { "b" : "5621120B7000", "elfType" : 3, "buildId" : "66B48B81895E2FEAAB0D26C828C647755EB81440" }, { "b" : "7FFF565F3000", "path" : "linux-vdso.so.1", "elfType" : 3, "buildId" : "95A2B69C329CAC2839FAFCA94982B947E15594C0" }, { "b" : "7FDF5776B000", "path" : "/usr/lib/x86_64-linux-gnu/libcurl.so.4", "elfType" : 3, "buildId" : "1C6BC2C0699CE0F7E848CA0B267E0CF07553F6AB" }, { "b" : "7FDF57550000", "path" : "/lib/x86_64-linux-gnu/libresolv.so.2", "elfType" : 3, "buildId" : "390E9CC4C215314B6D8ADE6D6E28F8518418039C" }, { "b" : "7FDF57085000", "path" : "/usr/lib/x86_64-linux-gnu/libcrypto.so.1.1", "elfType" : 3, "buildId" : "68CECD8742C0C91CDC82709C3E52A8C9F9451FC5" }, { "b" : "7FDF56DF8000", "path" : "/usr/lib/x86_64-linux-gnu/libssl.so.1.1", "elfType" : 3, "buildId" : "38AE5B4499DA422AA6D86BAED1902662DED5F730" }, { "b" : "7FDF56BF4000", "path" : "/lib/x86_64-linux-gnu/libdl.so.2", "elfType" : 3, "buildId" : "25AD56E902E23B490A9CCDB08A9744D89CB95BCC" }, { "b" : "7FDF569EC000", "path" : "/lib/x86_64-linux-gnu/librt.so.1", "elfType" : 3, "buildId" : "9826FBDF57ED7D6965131074CB3C08B1009C1CD8" }, { "b" : "7FDF5664E000", "path" : "/lib/x86_64-linux-gnu/libm.so.6", "elfType" : 3, "buildId" : "A33761AB8FB485311B3C85BF4253099D7CABE653" }, { "b" : "7FDF56436000", "path" : "/lib/x86_64-linux-gnu/libgcc_s.so.1", "elfType" : 3, "buildId" : "679F3AE11120EC7C483BC9295345D836F5C104F7" }, { "b" : "7FDF56217000", "path" : "/lib/x86_64-linux-gnu/libpthread.so.0", "elfType" : 3, "buildId" : "28C6AADE70B2D40D1F0F3D0A1A0CAD1AB816448F" }, { "b" : "7FDF55E26000", "path" : "/lib/x86_64-linux-gnu/libc.so.6", "elfType" : 3, "buildId" : "B417C0BA7CC5CF06D1D1BED6652CEDB9253C60D0" }, { "b" : "7FDF579EA000", "path" : "/lib64/ld-linux-x86-64.so.2", "elfType" : 3, "buildId" : "64DF1B961228382FE18684249ED800AB1DCEAAD4" }, { "b" : "7FDF55C01000", "path" : "/usr/lib/x86_64-linux-gnu/libnghttp2.so.14", "elfType" : 3, "buildId" : "4F00E5207693FDC249DA42EC6472ACA6A7B929AE" }, { "b" : "7FDF559E4000", "path" : "/usr/lib/x86_64-linux-gnu/libidn2.so.0", "elfType" : 3, "buildId" : "EE6E9462BA2491F4EE8C4E52C3323274A9366614" }, { "b" : "7FDF557C8000", "path" : "/usr/lib/x86_64-linux-gnu/librtmp.so.1", "elfType" : 3, "buildId" : "69465D8AA6B19086ABF2455A703F9168BF82A69F" }, { "b" : "7FDF555BA000", "path" : "/usr/lib/x86_64-linux-gnu/libpsl.so.5", "elfType" : 3, "buildId" : "CDAF1F1946846941F9D06414EC8C812D131A168E" }, { "b" : "7FDF5536F000", "path" : "/usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2", "elfType" : 3, "buildId" : "00F419F64B0E70D8C5EEF7050369AA40B2A6E090" }, { "b" : "7FDF5511D000", "path" : "/usr/lib/x86_64-linux-gnu/libldap_r-2.4.so.2", "elfType" : 3, "buildId" : "70EEF126558D1559A0A4E334FB68E4E9AABE90CB" }, { "b" : "7FDF54F0F000", "path" : "/usr/lib/x86_64-linux-gnu/liblber-2.4.so.2", "elfType" : 3, "buildId" : "C14042EC7BD22B9A07D2C16563FE3C2606F52AB7" }, { "b" : "7FDF54CF2000", "path" : "/lib/x86_64-linux-gnu/libz.so.1", "elfType" : 3, "buildId" : "EF3E006DFE3132A41D4D4DC0E407D6EA658E11C4" }, { "b" : "7FDF54974000", "path" : "/usr/lib/x86_64-linux-gnu/libunistring.so.2", "elfType" : 3, "buildId" : "0E2784298E7D3F4D894FE130ACEFA77C3E624F72" }, { "b" : "7FDF5460E000", "path" : "/usr/lib/x86_64-linux-gnu/libgnutls.so.30", "elfType" : 3, "buildId" : "1954013F9BBF9FF3A328A8E516481A2BBD8658EB" }, { "b" : "7FDF543DA000", "path" : "/usr/lib/x86_64-linux-gnu/libhogweed.so.4", "elfType" : 3, "buildId" : "842BDF0B0EAAB82E19F1EABFC38769F4040FBE31" }, { "b" : "7FDF541A4000", "path" : "/usr/lib/x86_64-linux-gnu/libnettle.so.6", "elfType" : 3, "buildId" : "C20D4B3BA13FCDCC3BF6857689BA9FC70BE3F6A5" }, { "b" : "7FDF53F23000", "path" : "/usr/lib/x86_64-linux-gnu/libgmp.so.10", "elfType" : 3, "buildId" : "D40EA9B5EC5BC46799E4A412319617BD38BE9341" }, { "b" : "7FDF53C4D000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5.so.3", "elfType" : 3, "buildId" : "69FBCF425EE6DF03DE93B82FBC2FC33790E68A96" }, { "b" : "7FDF53A1B000", "path" : "/usr/lib/x86_64-linux-gnu/libk5crypto.so.3", "elfType" : 3, "buildId" : "F400D5D643A7F9696DF0E6148FA99BEE6C1BDDF7" }, { "b" : "7FDF53817000", "path" : "/lib/x86_64-linux-gnu/libcom_err.so.2", "elfType" : 3, "buildId" : "17107881DF65C66B4C6D38CAB37C285FA44663BD" }, { "b" : "7FDF5360C000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5support.so.0", "elfType" : 3, "buildId" : "D78D71E8E016A534281B25B97CD7E5E9DB5FE00A" }, { "b" : "7FDF533F1000", "path" : "/usr/lib/x86_64-linux-gnu/libsasl2.so.2", "elfType" : 3, "buildId" : "6E98533B96F674F77C1BD83AA3565D974D9C4372" }, { "b" : "7FDF531B0000", "path" : "/usr/lib/x86_64-linux-gnu/libgssapi.so.3", "elfType" : 3, "buildId" : "A1A98DB481968073636BBAECB561A3EA8ED198AE" }, { "b" : "7FDF52E81000", "path" : "/usr/lib/x86_64-linux-gnu/libp11-kit.so.0", "elfType" : 3, "buildId" : "8DBD451EA5651283905E16FA7DFA9908688893A3" }, { "b" : "7FDF52C6E000", "path" : "/usr/lib/x86_64-linux-gnu/libtasn1.so.6", "elfType" : 3, "buildId" : "6036B89A3BB671B32E01464C0C82BFA016186352" }, { "b" : "7FDF52A6A000", "path" : "/lib/x86_64-linux-gnu/libkeyutils.so.1", "elfType" : 3, "buildId" : "F463E107B099910463BC32E837C73D341A52C27B" }, { "b" : "7FDF52861000", "path" : "/usr/lib/x86_64-linux-gnu/libheimntlm.so.0", "elfType" : 3, "buildId" : "C2376C5B831991591F1A67B976758185F86896D8" }, { "b" : "7FDF525D4000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5.so.26", "elfType" : 3, "buildId" : "69BDEE5FA0FEEDF317308BE850F78761861D520A" }, { "b" : "7FDF52332000", "path" : "/usr/lib/x86_64-linux-gnu/libasn1.so.8", "elfType" : 3, "buildId" : "315D74995AAA32DE4D15BA25F335066988B1B230" }, { "b" : "7FDF520FC000", "path" : "/usr/lib/x86_64-linux-gnu/libhcrypto.so.4", "elfType" : 3, "buildId" : "6673972A1C24A89EBAFBAE696188A4CB26C6DDEB" }, { "b" : "7FDF51EE6000", "path" : "/usr/lib/x86_64-linux-gnu/libroken.so.18", "elfType" : 3, "buildId" : "430827C33259C12248CF44B91A9A9821114376F5" }, { "b" : "7FDF51CDE000", "path" : "/usr/lib/x86_64-linux-gnu/libffi.so.6", "elfType" : 3, "buildId" : "3555B5F599C9787DFDDBF9E8DF6F706B9044D985" }, { "b" : "7FDF51AB5000", "path" : "/usr/lib/x86_64-linux-gnu/libwind.so.0", "elfType" : 3, "buildId" : "93A0931B1C2818F0EA224CE6FE5E31E84A9B55BB" }, { "b" : "7FDF518A6000", "path" : "/usr/lib/x86_64-linux-gnu/libheimbase.so.1", "elfType" : 3, "buildId" : "669D4CCE42FA4382796EFFCF0C16F459F4382C4C" }, { "b" : "7FDF5165C000", "path" : "/usr/lib/x86_64-linux-gnu/libhx509.so.5", "elfType" : 3, "buildId" : "4B80C543356EE0AF9039EFE7C9EA1CC1F74C426A" }, { "b" : "7FDF51353000", "path" : "/usr/lib/x86_64-linux-gnu/libsqlite3.so.0", "elfType" : 3, "buildId" : "66E2050B24B18B3F95154392560A17994D1690F2" }, { "b" : "7FDF5111B000", "path" : "/lib/x86_64-linux-gnu/libcrypt.so.1", "elfType" : 3, "buildId" : "810686AF0D5FD350A4FB1CC4B5AFF44A05C102CB" } ] }}
+ mongod(_ZN5mongo15printStackTraceERSo+0x41) [0x56211496d5b1]
+ mongod(+0x28B5BCC) [0x56211496cbcc]
+ mongod(+0x28B5C56) [0x56211496cc56]
+ libpthread.so.0(+0x12890) [0x7fdf56229890]
+ libc.so.6(gsignal+0xC7) [0x7fdf55e64e97]
+ libc.so.6(abort+0x141) [0x7fdf55e66801]
+ mongod(_ZN5mongo32fassertFailedNoTraceWithLocationEiPKcj+0x0) [0x562112dc8c19]
+ mongod(_ZN5mongo9transport18TransportLayerASIO12_runListenerEv+0x82D) [0x56211409ee9d]
+ mongod(+0x1FE7F3E) [0x56211409ef3e]
+ mongod(+0x29DC27F) [0x562114a9327f]
+ libpthread.so.0(+0x76DB) [0x7fdf5621e6db]
+ libc.so.6(clone+0x3F) [0x7fdf55f4788f]
+-----  END BACKTRACE  -----
+2020-07-09T18:24:20.776+0100 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-07-09T18:24:20.779+0100 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-07-09T18:24:20.864+0100 W  ASIO     [main] No TransportLayer configured during NetworkInterface startup
+2020-07-09T18:24:20.865+0100 I  CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=mongoH
+2020-07-09T18:24:20.866+0100 I  CONTROL  [initandlisten] db version v4.2.6
+2020-07-09T18:24:20.866+0100 I  CONTROL  [initandlisten] git version: 20364840b8f1af16917e4c23c1b5f5efd8b352f8
+2020-07-09T18:24:20.866+0100 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-07-09T18:24:20.866+0100 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-07-09T18:24:20.866+0100 I  CONTROL  [initandlisten] modules: none
+2020-07-09T18:24:20.866+0100 I  CONTROL  [initandlisten] build environment:
+2020-07-09T18:24:20.866+0100 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-07-09T18:24:20.866+0100 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-07-09T18:24:20.866+0100 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-07-09T18:24:20.866+0100 I  CONTROL  [initandlisten] options: { config: "/etc/mongod.conf", net: { bindIp: "127.0.0.1,0.0.0.0", port: 27017 }, processManagement: { timeZoneInfo: "/usr/share/zoneinfo" }, security: { authorization: "enabled" }, storage: { dbPath: "/data/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/var/log/mongodb/mongod.log" } }
+2020-07-09T18:24:20.877+0100 W  STORAGE  [initandlisten] Detected unclean shutdown - /data/db/mongod.lock is not empty.
+2020-07-09T18:24:20.877+0100 I  STORAGE  [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-07-09T18:24:20.881+0100 W  STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2020-07-09T18:24:20.882+0100 I  STORAGE  [initandlisten] 
+2020-07-09T18:24:20.882+0100 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-07-09T18:24:20.882+0100 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-07-09T18:24:20.882+0100 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=4608M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-07-09T18:24:22.876+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315462:876061][1:0x7ff18b90cb00], txn-recover: Recovering log 4 through 5
+2020-07-09T18:24:23.094+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315463:94068][1:0x7ff18b90cb00], txn-recover: Recovering log 5 through 5
+2020-07-09T18:24:23.385+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315463:385944][1:0x7ff18b90cb00], txn-recover: Main recovery loop: starting at 4/256 to 5/256
+2020-07-09T18:24:23.389+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315463:389889][1:0x7ff18b90cb00], txn-recover: Recovering log 4 through 5
+2020-07-09T18:24:23.740+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315463:740510][1:0x7ff18b90cb00], file:index-3-7895596307774803203.wt, txn-recover: Recovering log 5 through 5
+2020-07-09T18:24:23.848+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315463:848119][1:0x7ff18b90cb00], file:index-3-7895596307774803203.wt, txn-recover: Set global recovery timestamp: (0, 0)
+2020-07-09T18:24:23.883+0100 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-07-09T18:24:23.899+0100 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-07-09T18:24:23.905+0100 I  CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2020-07-09T18:24:23.905+0100 I  CONTROL  [initandlisten] 
+2020-07-09T18:24:23.908+0100 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-07-09T18:24:23.910+0100 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-07-09T18:24:23.911+0100 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-07-09T18:24:23.911+0100 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-07-09T18:24:23.913+0100 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-07-09T18:24:23.916+0100 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2020-07-09T18:24:23.930+0100 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-07-09T18:24:23.930+0100 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2020-07-09T18:24:23.931+0100 I  NETWORK  [listener] Listening on /tmp/mongodb-27017.sock
+2020-07-09T18:24:23.931+0100 I  NETWORK  [listener] Listening on 0.0.0.0
+2020-07-09T18:24:23.931+0100 F  NETWORK  [listener] Error listening for new connections on 127.0.0.1:27017: Address already in use
+2020-07-09T18:24:23.931+0100 F  -        [listener] Fatal Assertion 31339 at src/mongo/transport/transport_layer_asio.cpp 785
+2020-07-09T18:24:23.931+0100 F  -        [listener] 
+
+***aborting after fassert() failure
+
+
+2020-07-09T18:24:23.956+0100 F  -        [listener] Got signal: 6 (Aborted).
+ 0x55910fec85b1 0x55910fec7bcc 0x55910fec7c56 0x7ff189f3e890 0x7ff189b79e97 0x7ff189b7b801 0x55910e323c19 0x55910f5f9e9d 0x55910f5f9f3e 0x55910ffee27f 0x7ff189f336db 0x7ff189c5c88f
+----- BEGIN BACKTRACE -----
+{"backtrace":[{"b":"55910D612000","o":"28B65B1","s":"_ZN5mongo15printStackTraceERSo"},{"b":"55910D612000","o":"28B5BCC"},{"b":"55910D612000","o":"28B5C56"},{"b":"7FF189F2C000","o":"12890"},{"b":"7FF189B3B000","o":"3EE97","s":"gsignal"},{"b":"7FF189B3B000","o":"40801","s":"abort"},{"b":"55910D612000","o":"D11C19","s":"_ZN5mongo32fassertFailedNoTraceWithLocationEiPKcj"},{"b":"55910D612000","o":"1FE7E9D","s":"_ZN5mongo9transport18TransportLayerASIO12_runListenerEv"},{"b":"55910D612000","o":"1FE7F3E"},{"b":"55910D612000","o":"29DC27F"},{"b":"7FF189F2C000","o":"76DB"},{"b":"7FF189B3B000","o":"12188F","s":"clone"}],"processInfo":{ "mongodbVersion" : "4.2.6", "gitVersion" : "20364840b8f1af16917e4c23c1b5f5efd8b352f8", "compiledModules" : [], "uname" : { "sysname" : "Linux", "release" : "5.4.0-40-generic", "version" : "#44-Ubuntu SMP Tue Jun 23 00:01:04 UTC 2020", "machine" : "x86_64" }, "somap" : [ { "b" : "55910D612000", "elfType" : 3, "buildId" : "66B48B81895E2FEAAB0D26C828C647755EB81440" }, { "b" : "7FFD8615E000", "path" : "linux-vdso.so.1", "elfType" : 3, "buildId" : "95A2B69C329CAC2839FAFCA94982B947E15594C0" }, { "b" : "7FF18B480000", "path" : "/usr/lib/x86_64-linux-gnu/libcurl.so.4", "elfType" : 3, "buildId" : "1C6BC2C0699CE0F7E848CA0B267E0CF07553F6AB" }, { "b" : "7FF18B265000", "path" : "/lib/x86_64-linux-gnu/libresolv.so.2", "elfType" : 3, "buildId" : "390E9CC4C215314B6D8ADE6D6E28F8518418039C" }, { "b" : "7FF18AD9A000", "path" : "/usr/lib/x86_64-linux-gnu/libcrypto.so.1.1", "elfType" : 3, "buildId" : "68CECD8742C0C91CDC82709C3E52A8C9F9451FC5" }, { "b" : "7FF18AB0D000", "path" : "/usr/lib/x86_64-linux-gnu/libssl.so.1.1", "elfType" : 3, "buildId" : "38AE5B4499DA422AA6D86BAED1902662DED5F730" }, { "b" : "7FF18A909000", "path" : "/lib/x86_64-linux-gnu/libdl.so.2", "elfType" : 3, "buildId" : "25AD56E902E23B490A9CCDB08A9744D89CB95BCC" }, { "b" : "7FF18A701000", "path" : "/lib/x86_64-linux-gnu/librt.so.1", "elfType" : 3, "buildId" : "9826FBDF57ED7D6965131074CB3C08B1009C1CD8" }, { "b" : "7FF18A363000", "path" : "/lib/x86_64-linux-gnu/libm.so.6", "elfType" : 3, "buildId" : "A33761AB8FB485311B3C85BF4253099D7CABE653" }, { "b" : "7FF18A14B000", "path" : "/lib/x86_64-linux-gnu/libgcc_s.so.1", "elfType" : 3, "buildId" : "679F3AE11120EC7C483BC9295345D836F5C104F7" }, { "b" : "7FF189F2C000", "path" : "/lib/x86_64-linux-gnu/libpthread.so.0", "elfType" : 3, "buildId" : "28C6AADE70B2D40D1F0F3D0A1A0CAD1AB816448F" }, { "b" : "7FF189B3B000", "path" : "/lib/x86_64-linux-gnu/libc.so.6", "elfType" : 3, "buildId" : "B417C0BA7CC5CF06D1D1BED6652CEDB9253C60D0" }, { "b" : "7FF18B6FF000", "path" : "/lib64/ld-linux-x86-64.so.2", "elfType" : 3, "buildId" : "64DF1B961228382FE18684249ED800AB1DCEAAD4" }, { "b" : "7FF189916000", "path" : "/usr/lib/x86_64-linux-gnu/libnghttp2.so.14", "elfType" : 3, "buildId" : "4F00E5207693FDC249DA42EC6472ACA6A7B929AE" }, { "b" : "7FF1896F9000", "path" : "/usr/lib/x86_64-linux-gnu/libidn2.so.0", "elfType" : 3, "buildId" : "EE6E9462BA2491F4EE8C4E52C3323274A9366614" }, { "b" : "7FF1894DD000", "path" : "/usr/lib/x86_64-linux-gnu/librtmp.so.1", "elfType" : 3, "buildId" : "69465D8AA6B19086ABF2455A703F9168BF82A69F" }, { "b" : "7FF1892CF000", "path" : "/usr/lib/x86_64-linux-gnu/libpsl.so.5", "elfType" : 3, "buildId" : "CDAF1F1946846941F9D06414EC8C812D131A168E" }, { "b" : "7FF189084000", "path" : "/usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2", "elfType" : 3, "buildId" : "00F419F64B0E70D8C5EEF7050369AA40B2A6E090" }, { "b" : "7FF188E32000", "path" : "/usr/lib/x86_64-linux-gnu/libldap_r-2.4.so.2", "elfType" : 3, "buildId" : "70EEF126558D1559A0A4E334FB68E4E9AABE90CB" }, { "b" : "7FF188C24000", "path" : "/usr/lib/x86_64-linux-gnu/liblber-2.4.so.2", "elfType" : 3, "buildId" : "C14042EC7BD22B9A07D2C16563FE3C2606F52AB7" }, { "b" : "7FF188A07000", "path" : "/lib/x86_64-linux-gnu/libz.so.1", "elfType" : 3, "buildId" : "EF3E006DFE3132A41D4D4DC0E407D6EA658E11C4" }, { "b" : "7FF188689000", "path" : "/usr/lib/x86_64-linux-gnu/libunistring.so.2", "elfType" : 3, "buildId" : "0E2784298E7D3F4D894FE130ACEFA77C3E624F72" }, { "b" : "7FF188323000", "path" : "/usr/lib/x86_64-linux-gnu/libgnutls.so.30", "elfType" : 3, "buildId" : "1954013F9BBF9FF3A328A8E516481A2BBD8658EB" }, { "b" : "7FF1880EF000", "path" : "/usr/lib/x86_64-linux-gnu/libhogweed.so.4", "elfType" : 3, "buildId" : "842BDF0B0EAAB82E19F1EABFC38769F4040FBE31" }, { "b" : "7FF187EB9000", "path" : "/usr/lib/x86_64-linux-gnu/libnettle.so.6", "elfType" : 3, "buildId" : "C20D4B3BA13FCDCC3BF6857689BA9FC70BE3F6A5" }, { "b" : "7FF187C38000", "path" : "/usr/lib/x86_64-linux-gnu/libgmp.so.10", "elfType" : 3, "buildId" : "D40EA9B5EC5BC46799E4A412319617BD38BE9341" }, { "b" : "7FF187962000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5.so.3", "elfType" : 3, "buildId" : "69FBCF425EE6DF03DE93B82FBC2FC33790E68A96" }, { "b" : "7FF187730000", "path" : "/usr/lib/x86_64-linux-gnu/libk5crypto.so.3", "elfType" : 3, "buildId" : "F400D5D643A7F9696DF0E6148FA99BEE6C1BDDF7" }, { "b" : "7FF18752C000", "path" : "/lib/x86_64-linux-gnu/libcom_err.so.2", "elfType" : 3, "buildId" : "17107881DF65C66B4C6D38CAB37C285FA44663BD" }, { "b" : "7FF187321000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5support.so.0", "elfType" : 3, "buildId" : "D78D71E8E016A534281B25B97CD7E5E9DB5FE00A" }, { "b" : "7FF187106000", "path" : "/usr/lib/x86_64-linux-gnu/libsasl2.so.2", "elfType" : 3, "buildId" : "6E98533B96F674F77C1BD83AA3565D974D9C4372" }, { "b" : "7FF186EC5000", "path" : "/usr/lib/x86_64-linux-gnu/libgssapi.so.3", "elfType" : 3, "buildId" : "A1A98DB481968073636BBAECB561A3EA8ED198AE" }, { "b" : "7FF186B96000", "path" : "/usr/lib/x86_64-linux-gnu/libp11-kit.so.0", "elfType" : 3, "buildId" : "8DBD451EA5651283905E16FA7DFA9908688893A3" }, { "b" : "7FF186983000", "path" : "/usr/lib/x86_64-linux-gnu/libtasn1.so.6", "elfType" : 3, "buildId" : "6036B89A3BB671B32E01464C0C82BFA016186352" }, { "b" : "7FF18677F000", "path" : "/lib/x86_64-linux-gnu/libkeyutils.so.1", "elfType" : 3, "buildId" : "F463E107B099910463BC32E837C73D341A52C27B" }, { "b" : "7FF186576000", "path" : "/usr/lib/x86_64-linux-gnu/libheimntlm.so.0", "elfType" : 3, "buildId" : "C2376C5B831991591F1A67B976758185F86896D8" }, { "b" : "7FF1862E9000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5.so.26", "elfType" : 3, "buildId" : "69BDEE5FA0FEEDF317308BE850F78761861D520A" }, { "b" : "7FF186047000", "path" : "/usr/lib/x86_64-linux-gnu/libasn1.so.8", "elfType" : 3, "buildId" : "315D74995AAA32DE4D15BA25F335066988B1B230" }, { "b" : "7FF185E11000", "path" : "/usr/lib/x86_64-linux-gnu/libhcrypto.so.4", "elfType" : 3, "buildId" : "6673972A1C24A89EBAFBAE696188A4CB26C6DDEB" }, { "b" : "7FF185BFB000", "path" : "/usr/lib/x86_64-linux-gnu/libroken.so.18", "elfType" : 3, "buildId" : "430827C33259C12248CF44B91A9A9821114376F5" }, { "b" : "7FF1859F3000", "path" : "/usr/lib/x86_64-linux-gnu/libffi.so.6", "elfType" : 3, "buildId" : "3555B5F599C9787DFDDBF9E8DF6F706B9044D985" }, { "b" : "7FF1857CA000", "path" : "/usr/lib/x86_64-linux-gnu/libwind.so.0", "elfType" : 3, "buildId" : "93A0931B1C2818F0EA224CE6FE5E31E84A9B55BB" }, { "b" : "7FF1855BB000", "path" : "/usr/lib/x86_64-linux-gnu/libheimbase.so.1", "elfType" : 3, "buildId" : "669D4CCE42FA4382796EFFCF0C16F459F4382C4C" }, { "b" : "7FF185371000", "path" : "/usr/lib/x86_64-linux-gnu/libhx509.so.5", "elfType" : 3, "buildId" : "4B80C543356EE0AF9039EFE7C9EA1CC1F74C426A" }, { "b" : "7FF185068000", "path" : "/usr/lib/x86_64-linux-gnu/libsqlite3.so.0", "elfType" : 3, "buildId" : "66E2050B24B18B3F95154392560A17994D1690F2" }, { "b" : "7FF184E30000", "path" : "/lib/x86_64-linux-gnu/libcrypt.so.1", "elfType" : 3, "buildId" : "810686AF0D5FD350A4FB1CC4B5AFF44A05C102CB" } ] }}
+ mongod(_ZN5mongo15printStackTraceERSo+0x41) [0x55910fec85b1]
+ mongod(+0x28B5BCC) [0x55910fec7bcc]
+ mongod(+0x28B5C56) [0x55910fec7c56]
+ libpthread.so.0(+0x12890) [0x7ff189f3e890]
+ libc.so.6(gsignal+0xC7) [0x7ff189b79e97]
+ libc.so.6(abort+0x141) [0x7ff189b7b801]
+ mongod(_ZN5mongo32fassertFailedNoTraceWithLocationEiPKcj+0x0) [0x55910e323c19]
+ mongod(_ZN5mongo9transport18TransportLayerASIO12_runListenerEv+0x82D) [0x55910f5f9e9d]
+ mongod(+0x1FE7F3E) [0x55910f5f9f3e]
+ mongod(+0x29DC27F) [0x55910ffee27f]
+ libpthread.so.0(+0x76DB) [0x7ff189f336db]
+ libc.so.6(clone+0x3F) [0x7ff189c5c88f]
+-----  END BACKTRACE  -----
+2020-07-09T18:24:28.007+0100 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-07-09T18:24:28.012+0100 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-07-09T18:24:28.169+0100 W  ASIO     [main] No TransportLayer configured during NetworkInterface startup
+2020-07-09T18:24:28.175+0100 I  CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=mongoH
+2020-07-09T18:24:28.175+0100 I  CONTROL  [initandlisten] db version v4.2.6
+2020-07-09T18:24:28.175+0100 I  CONTROL  [initandlisten] git version: 20364840b8f1af16917e4c23c1b5f5efd8b352f8
+2020-07-09T18:24:28.175+0100 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-07-09T18:24:28.175+0100 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-07-09T18:24:28.175+0100 I  CONTROL  [initandlisten] modules: none
+2020-07-09T18:24:28.175+0100 I  CONTROL  [initandlisten] build environment:
+2020-07-09T18:24:28.175+0100 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-07-09T18:24:28.175+0100 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-07-09T18:24:28.175+0100 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-07-09T18:24:28.175+0100 I  CONTROL  [initandlisten] options: { config: "/etc/mongod.conf", net: { bindIp: "127.0.0.1,0.0.0.0", port: 27017 }, processManagement: { timeZoneInfo: "/usr/share/zoneinfo" }, security: { authorization: "enabled" }, storage: { dbPath: "/data/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/var/log/mongodb/mongod.log" } }
+2020-07-09T18:24:28.189+0100 W  STORAGE  [initandlisten] Detected unclean shutdown - /data/db/mongod.lock is not empty.
+2020-07-09T18:24:28.190+0100 I  STORAGE  [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-07-09T18:24:28.190+0100 W  STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2020-07-09T18:24:28.190+0100 I  STORAGE  [initandlisten] 
+2020-07-09T18:24:28.190+0100 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-07-09T18:24:28.190+0100 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-07-09T18:24:28.190+0100 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=4608M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-07-09T18:24:29.962+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315469:962159][1:0x7f9ad83b9b00], txn-recover: Recovering log 5 through 6
+2020-07-09T18:24:30.258+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315470:258663][1:0x7f9ad83b9b00], txn-recover: Recovering log 6 through 6
+2020-07-09T18:24:30.490+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315470:490840][1:0x7f9ad83b9b00], txn-recover: Main recovery loop: starting at 5/256 to 6/256
+2020-07-09T18:24:30.491+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315470:491652][1:0x7f9ad83b9b00], txn-recover: Recovering log 5 through 6
+2020-07-09T18:24:30.725+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315470:725638][1:0x7f9ad83b9b00], txn-recover: Recovering log 6 through 6
+2020-07-09T18:24:30.911+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315470:911134][1:0x7f9ad83b9b00], txn-recover: Set global recovery timestamp: (0, 0)
+2020-07-09T18:24:30.946+0100 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-07-09T18:24:30.978+0100 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-07-09T18:24:30.987+0100 I  CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2020-07-09T18:24:30.987+0100 I  CONTROL  [initandlisten] 
+2020-07-09T18:24:31.084+0100 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-07-09T18:24:31.102+0100 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-07-09T18:24:31.104+0100 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-07-09T18:24:31.107+0100 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-07-09T18:24:31.118+0100 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-07-09T18:24:31.121+0100 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2020-07-09T18:24:31.159+0100 I  SHARDING [LogicalSessionCacheReap] Marking collection config.system.sessions as collection version: <unsharded>
+2020-07-09T18:24:31.160+0100 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2020-07-09T18:24:31.166+0100 I  NETWORK  [listener] Listening on /tmp/mongodb-27017.sock
+2020-07-09T18:24:31.166+0100 I  NETWORK  [listener] Listening on 0.0.0.0
+2020-07-09T18:24:31.166+0100 F  NETWORK  [listener] Error listening for new connections on 127.0.0.1:27017: Address already in use
+2020-07-09T18:24:31.166+0100 F  -        [listener] Fatal Assertion 31339 at src/mongo/transport/transport_layer_asio.cpp 785
+2020-07-09T18:24:31.166+0100 F  -        [listener] 
+
+***aborting after fassert() failure
+
+
+2020-07-09T18:24:31.211+0100 F  -        [listener] Got signal: 6 (Aborted).
+ 0x558c8f12d5b1 0x558c8f12cbcc 0x558c8f12cc56 0x7f9ad69eb890 0x7f9ad6626e97 0x7f9ad6628801 0x558c8d588c19 0x558c8e85ee9d 0x558c8e85ef3e 0x558c8f25327f 0x7f9ad69e06db 0x7f9ad670988f
+----- BEGIN BACKTRACE -----
+{"backtrace":[{"b":"558C8C877000","o":"28B65B1","s":"_ZN5mongo15printStackTraceERSo"},{"b":"558C8C877000","o":"28B5BCC"},{"b":"558C8C877000","o":"28B5C56"},{"b":"7F9AD69D9000","o":"12890"},{"b":"7F9AD65E8000","o":"3EE97","s":"gsignal"},{"b":"7F9AD65E8000","o":"40801","s":"abort"},{"b":"558C8C877000","o":"D11C19","s":"_ZN5mongo32fassertFailedNoTraceWithLocationEiPKcj"},{"b":"558C8C877000","o":"1FE7E9D","s":"_ZN5mongo9transport18TransportLayerASIO12_runListenerEv"},{"b":"558C8C877000","o":"1FE7F3E"},{"b":"558C8C877000","o":"29DC27F"},{"b":"7F9AD69D9000","o":"76DB"},{"b":"7F9AD65E8000","o":"12188F","s":"clone"}],"processInfo":{ "mongodbVersion" : "4.2.6", "gitVersion" : "20364840b8f1af16917e4c23c1b5f5efd8b352f8", "compiledModules" : [], "uname" : { "sysname" : "Linux", "release" : "5.4.0-40-generic", "version" : "#44-Ubuntu SMP Tue Jun 23 00:01:04 UTC 2020", "machine" : "x86_64" }, "somap" : [ { "b" : "558C8C877000", "elfType" : 3, "buildId" : "66B48B81895E2FEAAB0D26C828C647755EB81440" }, { "b" : "7FFDD2F85000", "path" : "linux-vdso.so.1", "elfType" : 3, "buildId" : "95A2B69C329CAC2839FAFCA94982B947E15594C0" }, { "b" : "7F9AD7F2D000", "path" : "/usr/lib/x86_64-linux-gnu/libcurl.so.4", "elfType" : 3, "buildId" : "1C6BC2C0699CE0F7E848CA0B267E0CF07553F6AB" }, { "b" : "7F9AD7D12000", "path" : "/lib/x86_64-linux-gnu/libresolv.so.2", "elfType" : 3, "buildId" : "390E9CC4C215314B6D8ADE6D6E28F8518418039C" }, { "b" : "7F9AD7847000", "path" : "/usr/lib/x86_64-linux-gnu/libcrypto.so.1.1", "elfType" : 3, "buildId" : "68CECD8742C0C91CDC82709C3E52A8C9F9451FC5" }, { "b" : "7F9AD75BA000", "path" : "/usr/lib/x86_64-linux-gnu/libssl.so.1.1", "elfType" : 3, "buildId" : "38AE5B4499DA422AA6D86BAED1902662DED5F730" }, { "b" : "7F9AD73B6000", "path" : "/lib/x86_64-linux-gnu/libdl.so.2", "elfType" : 3, "buildId" : "25AD56E902E23B490A9CCDB08A9744D89CB95BCC" }, { "b" : "7F9AD71AE000", "path" : "/lib/x86_64-linux-gnu/librt.so.1", "elfType" : 3, "buildId" : "9826FBDF57ED7D6965131074CB3C08B1009C1CD8" }, { "b" : "7F9AD6E10000", "path" : "/lib/x86_64-linux-gnu/libm.so.6", "elfType" : 3, "buildId" : "A33761AB8FB485311B3C85BF4253099D7CABE653" }, { "b" : "7F9AD6BF8000", "path" : "/lib/x86_64-linux-gnu/libgcc_s.so.1", "elfType" : 3, "buildId" : "679F3AE11120EC7C483BC9295345D836F5C104F7" }, { "b" : "7F9AD69D9000", "path" : "/lib/x86_64-linux-gnu/libpthread.so.0", "elfType" : 3, "buildId" : "28C6AADE70B2D40D1F0F3D0A1A0CAD1AB816448F" }, { "b" : "7F9AD65E8000", "path" : "/lib/x86_64-linux-gnu/libc.so.6", "elfType" : 3, "buildId" : "B417C0BA7CC5CF06D1D1BED6652CEDB9253C60D0" }, { "b" : "7F9AD81AC000", "path" : "/lib64/ld-linux-x86-64.so.2", "elfType" : 3, "buildId" : "64DF1B961228382FE18684249ED800AB1DCEAAD4" }, { "b" : "7F9AD63C3000", "path" : "/usr/lib/x86_64-linux-gnu/libnghttp2.so.14", "elfType" : 3, "buildId" : "4F00E5207693FDC249DA42EC6472ACA6A7B929AE" }, { "b" : "7F9AD61A6000", "path" : "/usr/lib/x86_64-linux-gnu/libidn2.so.0", "elfType" : 3, "buildId" : "EE6E9462BA2491F4EE8C4E52C3323274A9366614" }, { "b" : "7F9AD5F8A000", "path" : "/usr/lib/x86_64-linux-gnu/librtmp.so.1", "elfType" : 3, "buildId" : "69465D8AA6B19086ABF2455A703F9168BF82A69F" }, { "b" : "7F9AD5D7C000", "path" : "/usr/lib/x86_64-linux-gnu/libpsl.so.5", "elfType" : 3, "buildId" : "CDAF1F1946846941F9D06414EC8C812D131A168E" }, { "b" : "7F9AD5B31000", "path" : "/usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2", "elfType" : 3, "buildId" : "00F419F64B0E70D8C5EEF7050369AA40B2A6E090" }, { "b" : "7F9AD58DF000", "path" : "/usr/lib/x86_64-linux-gnu/libldap_r-2.4.so.2", "elfType" : 3, "buildId" : "70EEF126558D1559A0A4E334FB68E4E9AABE90CB" }, { "b" : "7F9AD56D1000", "path" : "/usr/lib/x86_64-linux-gnu/liblber-2.4.so.2", "elfType" : 3, "buildId" : "C14042EC7BD22B9A07D2C16563FE3C2606F52AB7" }, { "b" : "7F9AD54B4000", "path" : "/lib/x86_64-linux-gnu/libz.so.1", "elfType" : 3, "buildId" : "EF3E006DFE3132A41D4D4DC0E407D6EA658E11C4" }, { "b" : "7F9AD5136000", "path" : "/usr/lib/x86_64-linux-gnu/libunistring.so.2", "elfType" : 3, "buildId" : "0E2784298E7D3F4D894FE130ACEFA77C3E624F72" }, { "b" : "7F9AD4DD0000", "path" : "/usr/lib/x86_64-linux-gnu/libgnutls.so.30", "elfType" : 3, "buildId" : "1954013F9BBF9FF3A328A8E516481A2BBD8658EB" }, { "b" : "7F9AD4B9C000", "path" : "/usr/lib/x86_64-linux-gnu/libhogweed.so.4", "elfType" : 3, "buildId" : "842BDF0B0EAAB82E19F1EABFC38769F4040FBE31" }, { "b" : "7F9AD4966000", "path" : "/usr/lib/x86_64-linux-gnu/libnettle.so.6", "elfType" : 3, "buildId" : "C20D4B3BA13FCDCC3BF6857689BA9FC70BE3F6A5" }, { "b" : "7F9AD46E5000", "path" : "/usr/lib/x86_64-linux-gnu/libgmp.so.10", "elfType" : 3, "buildId" : "D40EA9B5EC5BC46799E4A412319617BD38BE9341" }, { "b" : "7F9AD440F000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5.so.3", "elfType" : 3, "buildId" : "69FBCF425EE6DF03DE93B82FBC2FC33790E68A96" }, { "b" : "7F9AD41DD000", "path" : "/usr/lib/x86_64-linux-gnu/libk5crypto.so.3", "elfType" : 3, "buildId" : "F400D5D643A7F9696DF0E6148FA99BEE6C1BDDF7" }, { "b" : "7F9AD3FD9000", "path" : "/lib/x86_64-linux-gnu/libcom_err.so.2", "elfType" : 3, "buildId" : "17107881DF65C66B4C6D38CAB37C285FA44663BD" }, { "b" : "7F9AD3DCE000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5support.so.0", "elfType" : 3, "buildId" : "D78D71E8E016A534281B25B97CD7E5E9DB5FE00A" }, { "b" : "7F9AD3BB3000", "path" : "/usr/lib/x86_64-linux-gnu/libsasl2.so.2", "elfType" : 3, "buildId" : "6E98533B96F674F77C1BD83AA3565D974D9C4372" }, { "b" : "7F9AD3972000", "path" : "/usr/lib/x86_64-linux-gnu/libgssapi.so.3", "elfType" : 3, "buildId" : "A1A98DB481968073636BBAECB561A3EA8ED198AE" }, { "b" : "7F9AD3643000", "path" : "/usr/lib/x86_64-linux-gnu/libp11-kit.so.0", "elfType" : 3, "buildId" : "8DBD451EA5651283905E16FA7DFA9908688893A3" }, { "b" : "7F9AD3430000", "path" : "/usr/lib/x86_64-linux-gnu/libtasn1.so.6", "elfType" : 3, "buildId" : "6036B89A3BB671B32E01464C0C82BFA016186352" }, { "b" : "7F9AD322C000", "path" : "/lib/x86_64-linux-gnu/libkeyutils.so.1", "elfType" : 3, "buildId" : "F463E107B099910463BC32E837C73D341A52C27B" }, { "b" : "7F9AD3023000", "path" : "/usr/lib/x86_64-linux-gnu/libheimntlm.so.0", "elfType" : 3, "buildId" : "C2376C5B831991591F1A67B976758185F86896D8" }, { "b" : "7F9AD2D96000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5.so.26", "elfType" : 3, "buildId" : "69BDEE5FA0FEEDF317308BE850F78761861D520A" }, { "b" : "7F9AD2AF4000", "path" : "/usr/lib/x86_64-linux-gnu/libasn1.so.8", "elfType" : 3, "buildId" : "315D74995AAA32DE4D15BA25F335066988B1B230" }, { "b" : "7F9AD28BE000", "path" : "/usr/lib/x86_64-linux-gnu/libhcrypto.so.4", "elfType" : 3, "buildId" : "6673972A1C24A89EBAFBAE696188A4CB26C6DDEB" }, { "b" : "7F9AD26A8000", "path" : "/usr/lib/x86_64-linux-gnu/libroken.so.18", "elfType" : 3, "buildId" : "430827C33259C12248CF44B91A9A9821114376F5" }, { "b" : "7F9AD24A0000", "path" : "/usr/lib/x86_64-linux-gnu/libffi.so.6", "elfType" : 3, "buildId" : "3555B5F599C9787DFDDBF9E8DF6F706B9044D985" }, { "b" : "7F9AD2277000", "path" : "/usr/lib/x86_64-linux-gnu/libwind.so.0", "elfType" : 3, "buildId" : "93A0931B1C2818F0EA224CE6FE5E31E84A9B55BB" }, { "b" : "7F9AD2068000", "path" : "/usr/lib/x86_64-linux-gnu/libheimbase.so.1", "elfType" : 3, "buildId" : "669D4CCE42FA4382796EFFCF0C16F459F4382C4C" }, { "b" : "7F9AD1E1E000", "path" : "/usr/lib/x86_64-linux-gnu/libhx509.so.5", "elfType" : 3, "buildId" : "4B80C543356EE0AF9039EFE7C9EA1CC1F74C426A" }, { "b" : "7F9AD1B15000", "path" : "/usr/lib/x86_64-linux-gnu/libsqlite3.so.0", "elfType" : 3, "buildId" : "66E2050B24B18B3F95154392560A17994D1690F2" }, { "b" : "7F9AD18DD000", "path" : "/lib/x86_64-linux-gnu/libcrypt.so.1", "elfType" : 3, "buildId" : "810686AF0D5FD350A4FB1CC4B5AFF44A05C102CB" } ] }}
+ mongod(_ZN5mongo15printStackTraceERSo+0x41) [0x558c8f12d5b1]
+ mongod(+0x28B5BCC) [0x558c8f12cbcc]
+ mongod(+0x28B5C56) [0x558c8f12cc56]
+ libpthread.so.0(+0x12890) [0x7f9ad69eb890]
+ libc.so.6(gsignal+0xC7) [0x7f9ad6626e97]
+ libc.so.6(abort+0x141) [0x7f9ad6628801]
+ mongod(_ZN5mongo32fassertFailedNoTraceWithLocationEiPKcj+0x0) [0x558c8d588c19]
+ mongod(_ZN5mongo9transport18TransportLayerASIO12_runListenerEv+0x82D) [0x558c8e85ee9d]
+ mongod(+0x1FE7F3E) [0x558c8e85ef3e]
+ mongod(+0x29DC27F) [0x558c8f25327f]
+ libpthread.so.0(+0x76DB) [0x7f9ad69e06db]
+ libc.so.6(clone+0x3F) [0x7f9ad670988f]
+-----  END BACKTRACE  -----
+2020-07-09T18:24:37.131+0100 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-07-09T18:24:37.143+0100 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-07-09T18:24:37.238+0100 W  ASIO     [main] No TransportLayer configured during NetworkInterface startup
+2020-07-09T18:24:37.239+0100 I  CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=mongoH
+2020-07-09T18:24:37.239+0100 I  CONTROL  [initandlisten] db version v4.2.6
+2020-07-09T18:24:37.239+0100 I  CONTROL  [initandlisten] git version: 20364840b8f1af16917e4c23c1b5f5efd8b352f8
+2020-07-09T18:24:37.239+0100 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-07-09T18:24:37.239+0100 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-07-09T18:24:37.239+0100 I  CONTROL  [initandlisten] modules: none
+2020-07-09T18:24:37.239+0100 I  CONTROL  [initandlisten] build environment:
+2020-07-09T18:24:37.239+0100 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-07-09T18:24:37.239+0100 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-07-09T18:24:37.239+0100 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-07-09T18:24:37.239+0100 I  CONTROL  [initandlisten] options: { config: "/etc/mongod.conf", net: { bindIp: "127.0.0.1,0.0.0.0", port: 27017 }, processManagement: { timeZoneInfo: "/usr/share/zoneinfo" }, security: { authorization: "enabled" }, storage: { dbPath: "/data/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/var/log/mongodb/mongod.log" } }
+2020-07-09T18:24:37.245+0100 W  STORAGE  [initandlisten] Detected unclean shutdown - /data/db/mongod.lock is not empty.
+2020-07-09T18:24:37.246+0100 I  STORAGE  [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-07-09T18:24:37.250+0100 W  STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2020-07-09T18:24:37.250+0100 I  STORAGE  [initandlisten] 
+2020-07-09T18:24:37.250+0100 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-07-09T18:24:37.250+0100 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-07-09T18:24:37.250+0100 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=4608M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-07-09T18:24:38.810+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315478:810823][1:0x7f2763f82b00], txn-recover: Recovering log 6 through 7
+2020-07-09T18:24:38.973+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315478:973786][1:0x7f2763f82b00], txn-recover: Recovering log 7 through 7
+2020-07-09T18:24:39.207+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315479:207124][1:0x7f2763f82b00], txn-recover: Main recovery loop: starting at 6/256 to 7/256
+2020-07-09T18:24:39.208+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315479:208406][1:0x7f2763f82b00], txn-recover: Recovering log 6 through 7
+2020-07-09T18:24:39.550+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315479:550433][1:0x7f2763f82b00], file:index-3-7895596307774803203.wt, txn-recover: Recovering log 7 through 7
+2020-07-09T18:24:39.632+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315479:632278][1:0x7f2763f82b00], file:index-3-7895596307774803203.wt, txn-recover: Set global recovery timestamp: (0, 0)
+2020-07-09T18:24:39.766+0100 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-07-09T18:24:39.807+0100 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-07-09T18:24:39.819+0100 I  CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2020-07-09T18:24:39.819+0100 I  CONTROL  [initandlisten] 
+2020-07-09T18:24:39.833+0100 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-07-09T18:24:39.836+0100 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-07-09T18:24:39.836+0100 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-07-09T18:24:39.836+0100 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-07-09T18:24:39.837+0100 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-07-09T18:24:39.837+0100 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2020-07-09T18:24:39.856+0100 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-07-09T18:24:39.865+0100 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2020-07-09T18:24:39.867+0100 I  NETWORK  [listener] Listening on /tmp/mongodb-27017.sock
+2020-07-09T18:24:39.867+0100 I  NETWORK  [listener] Listening on 0.0.0.0
+2020-07-09T18:24:39.867+0100 F  NETWORK  [listener] Error listening for new connections on 127.0.0.1:27017: Address already in use
+2020-07-09T18:24:39.867+0100 F  -        [listener] Fatal Assertion 31339 at src/mongo/transport/transport_layer_asio.cpp 785
+2020-07-09T18:24:39.867+0100 F  -        [listener] 
+
+***aborting after fassert() failure
+
+
+2020-07-09T18:24:39.979+0100 F  -        [listener] Got signal: 6 (Aborted).
+ 0x55b6845385b1 0x55b684537bcc 0x55b684537c56 0x7f27625b4890 0x7f27621efe97 0x7f27621f1801 0x55b682993c19 0x55b683c69e9d 0x55b683c69f3e 0x55b68465e27f 0x7f27625a96db 0x7f27622d288f
+----- BEGIN BACKTRACE -----
+{"backtrace":[{"b":"55B681C82000","o":"28B65B1","s":"_ZN5mongo15printStackTraceERSo"},{"b":"55B681C82000","o":"28B5BCC"},{"b":"55B681C82000","o":"28B5C56"},{"b":"7F27625A2000","o":"12890"},{"b":"7F27621B1000","o":"3EE97","s":"gsignal"},{"b":"7F27621B1000","o":"40801","s":"abort"},{"b":"55B681C82000","o":"D11C19","s":"_ZN5mongo32fassertFailedNoTraceWithLocationEiPKcj"},{"b":"55B681C82000","o":"1FE7E9D","s":"_ZN5mongo9transport18TransportLayerASIO12_runListenerEv"},{"b":"55B681C82000","o":"1FE7F3E"},{"b":"55B681C82000","o":"29DC27F"},{"b":"7F27625A2000","o":"76DB"},{"b":"7F27621B1000","o":"12188F","s":"clone"}],"processInfo":{ "mongodbVersion" : "4.2.6", "gitVersion" : "20364840b8f1af16917e4c23c1b5f5efd8b352f8", "compiledModules" : [], "uname" : { "sysname" : "Linux", "release" : "5.4.0-40-generic", "version" : "#44-Ubuntu SMP Tue Jun 23 00:01:04 UTC 2020", "machine" : "x86_64" }, "somap" : [ { "b" : "55B681C82000", "elfType" : 3, "buildId" : "66B48B81895E2FEAAB0D26C828C647755EB81440" }, { "b" : "7FFC78BEB000", "path" : "linux-vdso.so.1", "elfType" : 3, "buildId" : "95A2B69C329CAC2839FAFCA94982B947E15594C0" }, { "b" : "7F2763AF6000", "path" : "/usr/lib/x86_64-linux-gnu/libcurl.so.4", "elfType" : 3, "buildId" : "1C6BC2C0699CE0F7E848CA0B267E0CF07553F6AB" }, { "b" : "7F27638DB000", "path" : "/lib/x86_64-linux-gnu/libresolv.so.2", "elfType" : 3, "buildId" : "390E9CC4C215314B6D8ADE6D6E28F8518418039C" }, { "b" : "7F2763410000", "path" : "/usr/lib/x86_64-linux-gnu/libcrypto.so.1.1", "elfType" : 3, "buildId" : "68CECD8742C0C91CDC82709C3E52A8C9F9451FC5" }, { "b" : "7F2763183000", "path" : "/usr/lib/x86_64-linux-gnu/libssl.so.1.1", "elfType" : 3, "buildId" : "38AE5B4499DA422AA6D86BAED1902662DED5F730" }, { "b" : "7F2762F7F000", "path" : "/lib/x86_64-linux-gnu/libdl.so.2", "elfType" : 3, "buildId" : "25AD56E902E23B490A9CCDB08A9744D89CB95BCC" }, { "b" : "7F2762D77000", "path" : "/lib/x86_64-linux-gnu/librt.so.1", "elfType" : 3, "buildId" : "9826FBDF57ED7D6965131074CB3C08B1009C1CD8" }, { "b" : "7F27629D9000", "path" : "/lib/x86_64-linux-gnu/libm.so.6", "elfType" : 3, "buildId" : "A33761AB8FB485311B3C85BF4253099D7CABE653" }, { "b" : "7F27627C1000", "path" : "/lib/x86_64-linux-gnu/libgcc_s.so.1", "elfType" : 3, "buildId" : "679F3AE11120EC7C483BC9295345D836F5C104F7" }, { "b" : "7F27625A2000", "path" : "/lib/x86_64-linux-gnu/libpthread.so.0", "elfType" : 3, "buildId" : "28C6AADE70B2D40D1F0F3D0A1A0CAD1AB816448F" }, { "b" : "7F27621B1000", "path" : "/lib/x86_64-linux-gnu/libc.so.6", "elfType" : 3, "buildId" : "B417C0BA7CC5CF06D1D1BED6652CEDB9253C60D0" }, { "b" : "7F2763D75000", "path" : "/lib64/ld-linux-x86-64.so.2", "elfType" : 3, "buildId" : "64DF1B961228382FE18684249ED800AB1DCEAAD4" }, { "b" : "7F2761F8C000", "path" : "/usr/lib/x86_64-linux-gnu/libnghttp2.so.14", "elfType" : 3, "buildId" : "4F00E5207693FDC249DA42EC6472ACA6A7B929AE" }, { "b" : "7F2761D6F000", "path" : "/usr/lib/x86_64-linux-gnu/libidn2.so.0", "elfType" : 3, "buildId" : "EE6E9462BA2491F4EE8C4E52C3323274A9366614" }, { "b" : "7F2761B53000", "path" : "/usr/lib/x86_64-linux-gnu/librtmp.so.1", "elfType" : 3, "buildId" : "69465D8AA6B19086ABF2455A703F9168BF82A69F" }, { "b" : "7F2761945000", "path" : "/usr/lib/x86_64-linux-gnu/libpsl.so.5", "elfType" : 3, "buildId" : "CDAF1F1946846941F9D06414EC8C812D131A168E" }, { "b" : "7F27616FA000", "path" : "/usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2", "elfType" : 3, "buildId" : "00F419F64B0E70D8C5EEF7050369AA40B2A6E090" }, { "b" : "7F27614A8000", "path" : "/usr/lib/x86_64-linux-gnu/libldap_r-2.4.so.2", "elfType" : 3, "buildId" : "70EEF126558D1559A0A4E334FB68E4E9AABE90CB" }, { "b" : "7F276129A000", "path" : "/usr/lib/x86_64-linux-gnu/liblber-2.4.so.2", "elfType" : 3, "buildId" : "C14042EC7BD22B9A07D2C16563FE3C2606F52AB7" }, { "b" : "7F276107D000", "path" : "/lib/x86_64-linux-gnu/libz.so.1", "elfType" : 3, "buildId" : "EF3E006DFE3132A41D4D4DC0E407D6EA658E11C4" }, { "b" : "7F2760CFF000", "path" : "/usr/lib/x86_64-linux-gnu/libunistring.so.2", "elfType" : 3, "buildId" : "0E2784298E7D3F4D894FE130ACEFA77C3E624F72" }, { "b" : "7F2760999000", "path" : "/usr/lib/x86_64-linux-gnu/libgnutls.so.30", "elfType" : 3, "buildId" : "1954013F9BBF9FF3A328A8E516481A2BBD8658EB" }, { "b" : "7F2760765000", "path" : "/usr/lib/x86_64-linux-gnu/libhogweed.so.4", "elfType" : 3, "buildId" : "842BDF0B0EAAB82E19F1EABFC38769F4040FBE31" }, { "b" : "7F276052F000", "path" : "/usr/lib/x86_64-linux-gnu/libnettle.so.6", "elfType" : 3, "buildId" : "C20D4B3BA13FCDCC3BF6857689BA9FC70BE3F6A5" }, { "b" : "7F27602AE000", "path" : "/usr/lib/x86_64-linux-gnu/libgmp.so.10", "elfType" : 3, "buildId" : "D40EA9B5EC5BC46799E4A412319617BD38BE9341" }, { "b" : "7F275FFD8000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5.so.3", "elfType" : 3, "buildId" : "69FBCF425EE6DF03DE93B82FBC2FC33790E68A96" }, { "b" : "7F275FDA6000", "path" : "/usr/lib/x86_64-linux-gnu/libk5crypto.so.3", "elfType" : 3, "buildId" : "F400D5D643A7F9696DF0E6148FA99BEE6C1BDDF7" }, { "b" : "7F275FBA2000", "path" : "/lib/x86_64-linux-gnu/libcom_err.so.2", "elfType" : 3, "buildId" : "17107881DF65C66B4C6D38CAB37C285FA44663BD" }, { "b" : "7F275F997000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5support.so.0", "elfType" : 3, "buildId" : "D78D71E8E016A534281B25B97CD7E5E9DB5FE00A" }, { "b" : "7F275F77C000", "path" : "/usr/lib/x86_64-linux-gnu/libsasl2.so.2", "elfType" : 3, "buildId" : "6E98533B96F674F77C1BD83AA3565D974D9C4372" }, { "b" : "7F275F53B000", "path" : "/usr/lib/x86_64-linux-gnu/libgssapi.so.3", "elfType" : 3, "buildId" : "A1A98DB481968073636BBAECB561A3EA8ED198AE" }, { "b" : "7F275F20C000", "path" : "/usr/lib/x86_64-linux-gnu/libp11-kit.so.0", "elfType" : 3, "buildId" : "8DBD451EA5651283905E16FA7DFA9908688893A3" }, { "b" : "7F275EFF9000", "path" : "/usr/lib/x86_64-linux-gnu/libtasn1.so.6", "elfType" : 3, "buildId" : "6036B89A3BB671B32E01464C0C82BFA016186352" }, { "b" : "7F275EDF5000", "path" : "/lib/x86_64-linux-gnu/libkeyutils.so.1", "elfType" : 3, "buildId" : "F463E107B099910463BC32E837C73D341A52C27B" }, { "b" : "7F275EBEC000", "path" : "/usr/lib/x86_64-linux-gnu/libheimntlm.so.0", "elfType" : 3, "buildId" : "C2376C5B831991591F1A67B976758185F86896D8" }, { "b" : "7F275E95F000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5.so.26", "elfType" : 3, "buildId" : "69BDEE5FA0FEEDF317308BE850F78761861D520A" }, { "b" : "7F275E6BD000", "path" : "/usr/lib/x86_64-linux-gnu/libasn1.so.8", "elfType" : 3, "buildId" : "315D74995AAA32DE4D15BA25F335066988B1B230" }, { "b" : "7F275E487000", "path" : "/usr/lib/x86_64-linux-gnu/libhcrypto.so.4", "elfType" : 3, "buildId" : "6673972A1C24A89EBAFBAE696188A4CB26C6DDEB" }, { "b" : "7F275E271000", "path" : "/usr/lib/x86_64-linux-gnu/libroken.so.18", "elfType" : 3, "buildId" : "430827C33259C12248CF44B91A9A9821114376F5" }, { "b" : "7F275E069000", "path" : "/usr/lib/x86_64-linux-gnu/libffi.so.6", "elfType" : 3, "buildId" : "3555B5F599C9787DFDDBF9E8DF6F706B9044D985" }, { "b" : "7F275DE40000", "path" : "/usr/lib/x86_64-linux-gnu/libwind.so.0", "elfType" : 3, "buildId" : "93A0931B1C2818F0EA224CE6FE5E31E84A9B55BB" }, { "b" : "7F275DC31000", "path" : "/usr/lib/x86_64-linux-gnu/libheimbase.so.1", "elfType" : 3, "buildId" : "669D4CCE42FA4382796EFFCF0C16F459F4382C4C" }, { "b" : "7F275D9E7000", "path" : "/usr/lib/x86_64-linux-gnu/libhx509.so.5", "elfType" : 3, "buildId" : "4B80C543356EE0AF9039EFE7C9EA1CC1F74C426A" }, { "b" : "7F275D6DE000", "path" : "/usr/lib/x86_64-linux-gnu/libsqlite3.so.0", "elfType" : 3, "buildId" : "66E2050B24B18B3F95154392560A17994D1690F2" }, { "b" : "7F275D4A6000", "path" : "/lib/x86_64-linux-gnu/libcrypt.so.1", "elfType" : 3, "buildId" : "810686AF0D5FD350A4FB1CC4B5AFF44A05C102CB" } ] }}
+ mongod(_ZN5mongo15printStackTraceERSo+0x41) [0x55b6845385b1]
+ mongod(+0x28B5BCC) [0x55b684537bcc]
+ mongod(+0x28B5C56) [0x55b684537c56]
+ libpthread.so.0(+0x12890) [0x7f27625b4890]
+ libc.so.6(gsignal+0xC7) [0x7f27621efe97]
+ libc.so.6(abort+0x141) [0x7f27621f1801]
+ mongod(_ZN5mongo32fassertFailedNoTraceWithLocationEiPKcj+0x0) [0x55b682993c19]
+ mongod(_ZN5mongo9transport18TransportLayerASIO12_runListenerEv+0x82D) [0x55b683c69e9d]
+ mongod(+0x1FE7F3E) [0x55b683c69f3e]
+ mongod(+0x29DC27F) [0x55b68465e27f]
+ libpthread.so.0(+0x76DB) [0x7f27625a96db]
+ libc.so.6(clone+0x3F) [0x7f27622d288f]
+-----  END BACKTRACE  -----
+2020-07-09T18:24:49.164+0100 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-07-09T18:24:49.167+0100 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-07-09T18:24:49.213+0100 W  ASIO     [main] No TransportLayer configured during NetworkInterface startup
+2020-07-09T18:24:49.213+0100 I  CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=mongoH
+2020-07-09T18:24:49.214+0100 I  CONTROL  [initandlisten] db version v4.2.6
+2020-07-09T18:24:49.214+0100 I  CONTROL  [initandlisten] git version: 20364840b8f1af16917e4c23c1b5f5efd8b352f8
+2020-07-09T18:24:49.214+0100 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-07-09T18:24:49.214+0100 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-07-09T18:24:49.214+0100 I  CONTROL  [initandlisten] modules: none
+2020-07-09T18:24:49.214+0100 I  CONTROL  [initandlisten] build environment:
+2020-07-09T18:24:49.214+0100 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-07-09T18:24:49.214+0100 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-07-09T18:24:49.214+0100 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-07-09T18:24:49.214+0100 I  CONTROL  [initandlisten] options: { config: "/etc/mongod.conf", net: { bindIp: "127.0.0.1,0.0.0.0", port: 27017 }, processManagement: { timeZoneInfo: "/usr/share/zoneinfo" }, security: { authorization: "enabled" }, storage: { dbPath: "/data/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/var/log/mongodb/mongod.log" } }
+2020-07-09T18:24:49.219+0100 W  STORAGE  [initandlisten] Detected unclean shutdown - /data/db/mongod.lock is not empty.
+2020-07-09T18:24:49.219+0100 I  STORAGE  [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-07-09T18:24:49.219+0100 W  STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2020-07-09T18:24:49.219+0100 I  STORAGE  [initandlisten] 
+2020-07-09T18:24:49.219+0100 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-07-09T18:24:49.219+0100 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-07-09T18:24:49.219+0100 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=4608M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-07-09T18:24:50.665+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315490:665717][1:0x7fa449f71b00], txn-recover: Recovering log 7 through 8
+2020-07-09T18:24:50.769+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315490:769013][1:0x7fa449f71b00], txn-recover: Recovering log 8 through 8
+2020-07-09T18:24:50.927+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315490:927761][1:0x7fa449f71b00], txn-recover: Main recovery loop: starting at 7/256 to 8/256
+2020-07-09T18:24:50.928+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315490:928387][1:0x7fa449f71b00], txn-recover: Recovering log 7 through 8
+2020-07-09T18:24:51.216+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315491:216302][1:0x7fa449f71b00], file:index-3-7895596307774803203.wt, txn-recover: Recovering log 8 through 8
+2020-07-09T18:24:51.334+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315491:334139][1:0x7fa449f71b00], file:index-3-7895596307774803203.wt, txn-recover: Set global recovery timestamp: (0, 0)
+2020-07-09T18:24:51.397+0100 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-07-09T18:24:51.413+0100 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-07-09T18:24:51.425+0100 I  CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2020-07-09T18:24:51.425+0100 I  CONTROL  [initandlisten] 
+2020-07-09T18:24:51.432+0100 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-07-09T18:24:51.434+0100 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-07-09T18:24:51.438+0100 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-07-09T18:24:51.438+0100 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-07-09T18:24:51.438+0100 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-07-09T18:24:51.439+0100 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2020-07-09T18:24:51.450+0100 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-07-09T18:24:51.451+0100 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2020-07-09T18:24:51.451+0100 I  NETWORK  [listener] Listening on /tmp/mongodb-27017.sock
+2020-07-09T18:24:51.451+0100 I  NETWORK  [listener] Listening on 0.0.0.0
+2020-07-09T18:24:51.451+0100 F  NETWORK  [listener] Error listening for new connections on 127.0.0.1:27017: Address already in use
+2020-07-09T18:24:51.451+0100 F  -        [listener] Fatal Assertion 31339 at src/mongo/transport/transport_layer_asio.cpp 785
+2020-07-09T18:24:51.451+0100 F  -        [listener] 
+
+***aborting after fassert() failure
+
+
+2020-07-09T18:24:51.486+0100 F  -        [listener] Got signal: 6 (Aborted).
+ 0x55e7b159f5b1 0x55e7b159ebcc 0x55e7b159ec56 0x7fa4485a3890 0x7fa4481dee97 0x7fa4481e0801 0x55e7af9fac19 0x55e7b0cd0e9d 0x55e7b0cd0f3e 0x55e7b16c527f 0x7fa4485986db 0x7fa4482c188f
+----- BEGIN BACKTRACE -----
+{"backtrace":[{"b":"55E7AECE9000","o":"28B65B1","s":"_ZN5mongo15printStackTraceERSo"},{"b":"55E7AECE9000","o":"28B5BCC"},{"b":"55E7AECE9000","o":"28B5C56"},{"b":"7FA448591000","o":"12890"},{"b":"7FA4481A0000","o":"3EE97","s":"gsignal"},{"b":"7FA4481A0000","o":"40801","s":"abort"},{"b":"55E7AECE9000","o":"D11C19","s":"_ZN5mongo32fassertFailedNoTraceWithLocationEiPKcj"},{"b":"55E7AECE9000","o":"1FE7E9D","s":"_ZN5mongo9transport18TransportLayerASIO12_runListenerEv"},{"b":"55E7AECE9000","o":"1FE7F3E"},{"b":"55E7AECE9000","o":"29DC27F"},{"b":"7FA448591000","o":"76DB"},{"b":"7FA4481A0000","o":"12188F","s":"clone"}],"processInfo":{ "mongodbVersion" : "4.2.6", "gitVersion" : "20364840b8f1af16917e4c23c1b5f5efd8b352f8", "compiledModules" : [], "uname" : { "sysname" : "Linux", "release" : "5.4.0-40-generic", "version" : "#44-Ubuntu SMP Tue Jun 23 00:01:04 UTC 2020", "machine" : "x86_64" }, "somap" : [ { "b" : "55E7AECE9000", "elfType" : 3, "buildId" : "66B48B81895E2FEAAB0D26C828C647755EB81440" }, { "b" : "7FFFA1AFA000", "path" : "linux-vdso.so.1", "elfType" : 3, "buildId" : "95A2B69C329CAC2839FAFCA94982B947E15594C0" }, { "b" : "7FA449AE5000", "path" : "/usr/lib/x86_64-linux-gnu/libcurl.so.4", "elfType" : 3, "buildId" : "1C6BC2C0699CE0F7E848CA0B267E0CF07553F6AB" }, { "b" : "7FA4498CA000", "path" : "/lib/x86_64-linux-gnu/libresolv.so.2", "elfType" : 3, "buildId" : "390E9CC4C215314B6D8ADE6D6E28F8518418039C" }, { "b" : "7FA4493FF000", "path" : "/usr/lib/x86_64-linux-gnu/libcrypto.so.1.1", "elfType" : 3, "buildId" : "68CECD8742C0C91CDC82709C3E52A8C9F9451FC5" }, { "b" : "7FA449172000", "path" : "/usr/lib/x86_64-linux-gnu/libssl.so.1.1", "elfType" : 3, "buildId" : "38AE5B4499DA422AA6D86BAED1902662DED5F730" }, { "b" : "7FA448F6E000", "path" : "/lib/x86_64-linux-gnu/libdl.so.2", "elfType" : 3, "buildId" : "25AD56E902E23B490A9CCDB08A9744D89CB95BCC" }, { "b" : "7FA448D66000", "path" : "/lib/x86_64-linux-gnu/librt.so.1", "elfType" : 3, "buildId" : "9826FBDF57ED7D6965131074CB3C08B1009C1CD8" }, { "b" : "7FA4489C8000", "path" : "/lib/x86_64-linux-gnu/libm.so.6", "elfType" : 3, "buildId" : "A33761AB8FB485311B3C85BF4253099D7CABE653" }, { "b" : "7FA4487B0000", "path" : "/lib/x86_64-linux-gnu/libgcc_s.so.1", "elfType" : 3, "buildId" : "679F3AE11120EC7C483BC9295345D836F5C104F7" }, { "b" : "7FA448591000", "path" : "/lib/x86_64-linux-gnu/libpthread.so.0", "elfType" : 3, "buildId" : "28C6AADE70B2D40D1F0F3D0A1A0CAD1AB816448F" }, { "b" : "7FA4481A0000", "path" : "/lib/x86_64-linux-gnu/libc.so.6", "elfType" : 3, "buildId" : "B417C0BA7CC5CF06D1D1BED6652CEDB9253C60D0" }, { "b" : "7FA449D64000", "path" : "/lib64/ld-linux-x86-64.so.2", "elfType" : 3, "buildId" : "64DF1B961228382FE18684249ED800AB1DCEAAD4" }, { "b" : "7FA447F7B000", "path" : "/usr/lib/x86_64-linux-gnu/libnghttp2.so.14", "elfType" : 3, "buildId" : "4F00E5207693FDC249DA42EC6472ACA6A7B929AE" }, { "b" : "7FA447D5E000", "path" : "/usr/lib/x86_64-linux-gnu/libidn2.so.0", "elfType" : 3, "buildId" : "EE6E9462BA2491F4EE8C4E52C3323274A9366614" }, { "b" : "7FA447B42000", "path" : "/usr/lib/x86_64-linux-gnu/librtmp.so.1", "elfType" : 3, "buildId" : "69465D8AA6B19086ABF2455A703F9168BF82A69F" }, { "b" : "7FA447934000", "path" : "/usr/lib/x86_64-linux-gnu/libpsl.so.5", "elfType" : 3, "buildId" : "CDAF1F1946846941F9D06414EC8C812D131A168E" }, { "b" : "7FA4476E9000", "path" : "/usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2", "elfType" : 3, "buildId" : "00F419F64B0E70D8C5EEF7050369AA40B2A6E090" }, { "b" : "7FA447497000", "path" : "/usr/lib/x86_64-linux-gnu/libldap_r-2.4.so.2", "elfType" : 3, "buildId" : "70EEF126558D1559A0A4E334FB68E4E9AABE90CB" }, { "b" : "7FA447289000", "path" : "/usr/lib/x86_64-linux-gnu/liblber-2.4.so.2", "elfType" : 3, "buildId" : "C14042EC7BD22B9A07D2C16563FE3C2606F52AB7" }, { "b" : "7FA44706C000", "path" : "/lib/x86_64-linux-gnu/libz.so.1", "elfType" : 3, "buildId" : "EF3E006DFE3132A41D4D4DC0E407D6EA658E11C4" }, { "b" : "7FA446CEE000", "path" : "/usr/lib/x86_64-linux-gnu/libunistring.so.2", "elfType" : 3, "buildId" : "0E2784298E7D3F4D894FE130ACEFA77C3E624F72" }, { "b" : "7FA446988000", "path" : "/usr/lib/x86_64-linux-gnu/libgnutls.so.30", "elfType" : 3, "buildId" : "1954013F9BBF9FF3A328A8E516481A2BBD8658EB" }, { "b" : "7FA446754000", "path" : "/usr/lib/x86_64-linux-gnu/libhogweed.so.4", "elfType" : 3, "buildId" : "842BDF0B0EAAB82E19F1EABFC38769F4040FBE31" }, { "b" : "7FA44651E000", "path" : "/usr/lib/x86_64-linux-gnu/libnettle.so.6", "elfType" : 3, "buildId" : "C20D4B3BA13FCDCC3BF6857689BA9FC70BE3F6A5" }, { "b" : "7FA44629D000", "path" : "/usr/lib/x86_64-linux-gnu/libgmp.so.10", "elfType" : 3, "buildId" : "D40EA9B5EC5BC46799E4A412319617BD38BE9341" }, { "b" : "7FA445FC7000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5.so.3", "elfType" : 3, "buildId" : "69FBCF425EE6DF03DE93B82FBC2FC33790E68A96" }, { "b" : "7FA445D95000", "path" : "/usr/lib/x86_64-linux-gnu/libk5crypto.so.3", "elfType" : 3, "buildId" : "F400D5D643A7F9696DF0E6148FA99BEE6C1BDDF7" }, { "b" : "7FA445B91000", "path" : "/lib/x86_64-linux-gnu/libcom_err.so.2", "elfType" : 3, "buildId" : "17107881DF65C66B4C6D38CAB37C285FA44663BD" }, { "b" : "7FA445986000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5support.so.0", "elfType" : 3, "buildId" : "D78D71E8E016A534281B25B97CD7E5E9DB5FE00A" }, { "b" : "7FA44576B000", "path" : "/usr/lib/x86_64-linux-gnu/libsasl2.so.2", "elfType" : 3, "buildId" : "6E98533B96F674F77C1BD83AA3565D974D9C4372" }, { "b" : "7FA44552A000", "path" : "/usr/lib/x86_64-linux-gnu/libgssapi.so.3", "elfType" : 3, "buildId" : "A1A98DB481968073636BBAECB561A3EA8ED198AE" }, { "b" : "7FA4451FB000", "path" : "/usr/lib/x86_64-linux-gnu/libp11-kit.so.0", "elfType" : 3, "buildId" : "8DBD451EA5651283905E16FA7DFA9908688893A3" }, { "b" : "7FA444FE8000", "path" : "/usr/lib/x86_64-linux-gnu/libtasn1.so.6", "elfType" : 3, "buildId" : "6036B89A3BB671B32E01464C0C82BFA016186352" }, { "b" : "7FA444DE4000", "path" : "/lib/x86_64-linux-gnu/libkeyutils.so.1", "elfType" : 3, "buildId" : "F463E107B099910463BC32E837C73D341A52C27B" }, { "b" : "7FA444BDB000", "path" : "/usr/lib/x86_64-linux-gnu/libheimntlm.so.0", "elfType" : 3, "buildId" : "C2376C5B831991591F1A67B976758185F86896D8" }, { "b" : "7FA44494E000", "path" : "/usr/lib/x86_64-linux-gnu/libkrb5.so.26", "elfType" : 3, "buildId" : "69BDEE5FA0FEEDF317308BE850F78761861D520A" }, { "b" : "7FA4446AC000", "path" : "/usr/lib/x86_64-linux-gnu/libasn1.so.8", "elfType" : 3, "buildId" : "315D74995AAA32DE4D15BA25F335066988B1B230" }, { "b" : "7FA444476000", "path" : "/usr/lib/x86_64-linux-gnu/libhcrypto.so.4", "elfType" : 3, "buildId" : "6673972A1C24A89EBAFBAE696188A4CB26C6DDEB" }, { "b" : "7FA444260000", "path" : "/usr/lib/x86_64-linux-gnu/libroken.so.18", "elfType" : 3, "buildId" : "430827C33259C12248CF44B91A9A9821114376F5" }, { "b" : "7FA444058000", "path" : "/usr/lib/x86_64-linux-gnu/libffi.so.6", "elfType" : 3, "buildId" : "3555B5F599C9787DFDDBF9E8DF6F706B9044D985" }, { "b" : "7FA443E2F000", "path" : "/usr/lib/x86_64-linux-gnu/libwind.so.0", "elfType" : 3, "buildId" : "93A0931B1C2818F0EA224CE6FE5E31E84A9B55BB" }, { "b" : "7FA443C20000", "path" : "/usr/lib/x86_64-linux-gnu/libheimbase.so.1", "elfType" : 3, "buildId" : "669D4CCE42FA4382796EFFCF0C16F459F4382C4C" }, { "b" : "7FA4439D6000", "path" : "/usr/lib/x86_64-linux-gnu/libhx509.so.5", "elfType" : 3, "buildId" : "4B80C543356EE0AF9039EFE7C9EA1CC1F74C426A" }, { "b" : "7FA4436CD000", "path" : "/usr/lib/x86_64-linux-gnu/libsqlite3.so.0", "elfType" : 3, "buildId" : "66E2050B24B18B3F95154392560A17994D1690F2" }, { "b" : "7FA443495000", "path" : "/lib/x86_64-linux-gnu/libcrypt.so.1", "elfType" : 3, "buildId" : "810686AF0D5FD350A4FB1CC4B5AFF44A05C102CB" } ] }}
+ mongod(_ZN5mongo15printStackTraceERSo+0x41) [0x55e7b159f5b1]
+ mongod(+0x28B5BCC) [0x55e7b159ebcc]
+ mongod(+0x28B5C56) [0x55e7b159ec56]
+ libpthread.so.0(+0x12890) [0x7fa4485a3890]
+ libc.so.6(gsignal+0xC7) [0x7fa4481dee97]
+ libc.so.6(abort+0x141) [0x7fa4481e0801]
+ mongod(_ZN5mongo32fassertFailedNoTraceWithLocationEiPKcj+0x0) [0x55e7af9fac19]
+ mongod(_ZN5mongo9transport18TransportLayerASIO12_runListenerEv+0x82D) [0x55e7b0cd0e9d]
+ mongod(+0x1FE7F3E) [0x55e7b0cd0f3e]
+ mongod(+0x29DC27F) [0x55e7b16c527f]
+ libpthread.so.0(+0x76DB) [0x7fa4485986db]
+ libc.so.6(clone+0x3F) [0x7fa4482c188f]
+-----  END BACKTRACE  -----
+2020-07-09T18:27:33.850+0100 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-07-09T18:27:33.864+0100 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-07-09T18:27:33.893+0100 W  ASIO     [main] No TransportLayer configured during NetworkInterface startup
+2020-07-09T18:27:33.895+0100 I  CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=mongoH
+2020-07-09T18:27:33.895+0100 I  CONTROL  [initandlisten] db version v4.2.6
+2020-07-09T18:27:33.895+0100 I  CONTROL  [initandlisten] git version: 20364840b8f1af16917e4c23c1b5f5efd8b352f8
+2020-07-09T18:27:33.895+0100 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-07-09T18:27:33.895+0100 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-07-09T18:27:33.895+0100 I  CONTROL  [initandlisten] modules: none
+2020-07-09T18:27:33.895+0100 I  CONTROL  [initandlisten] build environment:
+2020-07-09T18:27:33.895+0100 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-07-09T18:27:33.895+0100 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-07-09T18:27:33.895+0100 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-07-09T18:27:33.895+0100 I  CONTROL  [initandlisten] options: { config: "/etc/mongod.conf", net: { bindIp: "0.0.0.0", port: 27017 }, processManagement: { timeZoneInfo: "/usr/share/zoneinfo" }, security: { authorization: "enabled" }, storage: { dbPath: "/data/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/var/log/mongodb/mongod.log" } }
+2020-07-09T18:27:33.895+0100 I  STORAGE  [initandlisten] 
+2020-07-09T18:27:33.895+0100 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-07-09T18:27:33.896+0100 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-07-09T18:27:33.896+0100 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=4608M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-07-09T18:27:35.247+0100 I  STORAGE  [initandlisten] WiredTiger message [1594315655:247403][1:0x7fcccb537b00], txn-recover: Set global recovery timestamp: (0, 0)
+2020-07-09T18:27:35.305+0100 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-07-09T18:27:35.366+0100 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-07-09T18:27:35.379+0100 I  CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2020-07-09T18:27:35.379+0100 I  CONTROL  [initandlisten] 
+2020-07-09T18:27:35.381+0100 I  STORAGE  [initandlisten] createCollection: admin.system.version with provided UUID: a6945d02-d173-4eba-812e-2212654f5967 and options: { uuid: UUID("a6945d02-d173-4eba-812e-2212654f5967") }
+2020-07-09T18:27:35.423+0100 I  INDEX    [initandlisten] index build: done building index _id_ on ns admin.system.version
+2020-07-09T18:27:35.424+0100 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-07-09T18:27:35.424+0100 I  COMMAND  [initandlisten] setting featureCompatibilityVersion to 4.2
+2020-07-09T18:27:35.424+0100 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-07-09T18:27:35.424+0100 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-07-09T18:27:35.425+0100 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-07-09T18:27:35.425+0100 I  STORAGE  [initandlisten] createCollection: local.startup_log with generated UUID: f33f5001-627e-4b7c-a8cf-e20264f21078 and options: { capped: true, size: 10485760 }
+2020-07-09T18:27:35.464+0100 I  INDEX    [initandlisten] index build: done building index _id_ on ns local.startup_log
+2020-07-09T18:27:35.464+0100 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-07-09T18:27:35.464+0100 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2020-07-09T18:27:35.494+0100 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-07-09T18:27:35.494+0100 I  STORAGE  [LogicalSessionCacheRefresh] createCollection: config.system.sessions with provided UUID: bd6a8344-b082-4924-8645-85264f4eec10 and options: { uuid: UUID("bd6a8344-b082-4924-8645-85264f4eec10") }
+2020-07-09T18:27:35.507+0100 I  NETWORK  [listener] Listening on /tmp/mongodb-27017.sock
+2020-07-09T18:27:35.507+0100 I  NETWORK  [listener] Listening on 0.0.0.0
+2020-07-09T18:27:35.507+0100 I  NETWORK  [listener] waiting for connections on port 27017
+2020-07-09T18:27:35.555+0100 I  INDEX    [LogicalSessionCacheRefresh] index build: done building index _id_ on ns config.system.sessions
+2020-07-09T18:27:35.591+0100 I  INDEX    [LogicalSessionCacheRefresh] index build: starting on config.system.sessions properties: { v: 2, key: { lastUse: 1 }, name: "lsidTTLIndex", ns: "config.system.sessions", expireAfterSeconds: 1800 } using method: Hybrid
+2020-07-09T18:27:35.591+0100 I  INDEX    [LogicalSessionCacheRefresh] build may temporarily use up to 200 megabytes of RAM
+2020-07-09T18:27:35.591+0100 I  INDEX    [LogicalSessionCacheRefresh] index build: collection scan done. scanned 0 total records in 0 seconds
+2020-07-09T18:27:35.592+0100 I  INDEX    [LogicalSessionCacheRefresh] index build: inserted 0 keys from external sorter into index in 0 seconds
+2020-07-09T18:27:35.596+0100 I  INDEX    [LogicalSessionCacheRefresh] index build: done building index lsidTTLIndex on ns config.system.sessions
+2020-07-09T18:27:35.604+0100 I  COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: createIndexes { createIndexes: "system.sessions", indexes: [ { key: { lastUse: 1 }, name: "lsidTTLIndex", expireAfterSeconds: 1800 } ], $db: "config" } numYields:0 reslen:114 locks:{ ParallelBatchWriterMode: { acquireCount: { r: 2 } }, ReplicationStateTransition: { acquireCount: { w: 3 } }, Global: { acquireCount: { r: 1, w: 2 } }, Database: { acquireCount: { r: 1, w: 2, W: 1 } }, Collection: { acquireCount: { r: 4, w: 1, R: 1, W: 2 } }, Mutex: { acquireCount: { r: 3 } } } flowControl:{ acquireCount: 1, timeAcquiringMicros: 1 } storage:{} protocol:op_msg 109ms
+2020-07-09T18:27:35.607+0100 I  COMMAND  [LogicalSessionCacheReap] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:307 locks:{ ReplicationStateTransition: { acquireCount: { w: 1 } }, Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 }, acquireWaitCount: { r: 1 }, timeAcquiringMicros: { r: 101269 } }, Collection: { acquireCount: { r: 1 } }, Mutex: { acquireCount: { r: 1 } } } storage:{} protocol:op_msg 101ms
+2020-07-09T18:27:35.607+0100 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2020-07-09T18:27:36.000+0100 I  SHARDING [ftdc] Marking collection local.oplog.rs as collection version: <unsharded>
+2020-07-09T18:27:37.160+0100 I  NETWORK  [listener] connection accepted from 172.16.238.11:57088 #1 (1 connection now open)
+2020-07-09T18:27:37.162+0100 I  NETWORK  [conn1] end connection 172.16.238.11:57088 (0 connections now open)
+2020-07-09T18:27:38.938+0100 I  NETWORK  [listener] connection accepted from 172.16.238.11:57090 #2 (1 connection now open)
+2020-07-09T18:27:39.004+0100 I  NETWORK  [conn2] received client metadata from 172.16.238.11:57090 conn2: { driver: { name: "nodejs", version: "2.2.24" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.4.0-40-generic" }, platform: "Node.js v12.18.2, LE, mongodb-core: 2.1.8" }
+2020-07-09T18:27:39.023+0100 I  SHARDING [conn2] Marking collection admin.system.users as collection version: <unsharded>
+2020-07-09T18:27:39.023+0100 I  ACCESS   [conn2] SASL SCRAM-SHA-1 authentication failed for root on admin from client 172.16.238.11:57090 ; UserNotFound: Could not find user "root" for db "admin"
+2020-07-09T18:28:16.157+0100 I  NETWORK  [conn2] end connection 172.16.238.11:57090 (0 connections now open)
+2020-07-09T18:28:16.945+0100 I  CONTROL  [signalProcessingThread] got signal 15 (Terminated), will terminate after current cmd ends
+2020-07-09T18:28:16.962+0100 I  NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2020-07-09T18:28:16.963+0100 I  NETWORK  [listener] removing socket file: /tmp/mongodb-27017.sock
+2020-07-09T18:28:16.964+0100 I  -        [signalProcessingThread] Stopping further Flow Control ticket acquisitions.
+2020-07-09T18:28:16.964+0100 I  CONTROL  [signalProcessingThread] Shutting down free monitoring
+2020-07-09T18:28:16.969+0100 I  FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2020-07-09T18:28:16.982+0100 I  STORAGE  [signalProcessingThread] Deregistering all the collections
+2020-07-09T18:28:16.983+0100 I  STORAGE  [signalProcessingThread] Timestamp monitor shutting down
+2020-07-09T18:28:16.983+0100 I  STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2020-07-09T18:28:16.985+0100 I  STORAGE  [signalProcessingThread] Shutting down session sweeper thread
+2020-07-09T18:28:16.993+0100 I  STORAGE  [signalProcessingThread] Finished shutting down session sweeper thread
+2020-07-09T18:28:16.993+0100 I  STORAGE  [signalProcessingThread] Shutting down journal flusher thread
+2020-07-09T18:28:17.091+0100 I  STORAGE  [signalProcessingThread] Finished shutting down journal flusher thread
+2020-07-09T18:28:17.091+0100 I  STORAGE  [signalProcessingThread] Shutting down checkpoint thread
+2020-07-09T18:28:17.091+0100 I  STORAGE  [signalProcessingThread] Finished shutting down checkpoint thread
+2020-07-09T18:28:17.191+0100 I  STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2020-07-09T18:28:17.191+0100 I  CONTROL  [signalProcessingThread] now exiting
+2020-07-09T18:28:17.191+0100 I  CONTROL  [signalProcessingThread] shutting down with code:0
+
