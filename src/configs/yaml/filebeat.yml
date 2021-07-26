@@ -88,6 +88,15 @@ filebeat.modules:
     # can be added under this section.
     #input:
 
+#-------------------------------- Apache Module --------------------------------
+- module: nginx
+  access:
+    enabled: true
+    var.paths: ["/path/to/log/nginx/access.log*"]
+  error:
+    enabled: true
+    var.paths: ["/path/to/log/nginx/error.log*"]
+
 # ============================== Filebeat inputs ===============================
 
 filebeat.inputs:
@@ -137,4 +146,3 @@ setup.kibana:
 # the dashboards is disabled by default and can be enabled either by setting the
 # options here, or by using the `-setup` CLI flag.
 setup.dashboards.enabled: true
-
