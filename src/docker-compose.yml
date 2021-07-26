@@ -135,55 +135,55 @@ services:
             - 3306:3306
         restart: on-failure
         
-    adminer:
-        image: adminer:4.7.7
-        container_name: adminer
-        hostname: adminer
-        environment:
-            ADMINER_DEFAULT_SERVER: mysql
-        networks:
-            - stack
-        ports:
-            - 8080:8080
-        depends_on:
-            - mysql
-        restart: on-failure
-        
-    mongodb:
-        image: mongo:4.2.6
-        container_name: mongodb
-        hostname: mongodb
-        environment:
-            MONGO_INITDB_ROOT_USERNAME: root
-            MONGO_INITDB_ROOT_PASSWORD: root
-            ME_CONFIG_BASICAUTH_USERNAME: admin
-            ME_CONFIG_BASICAUTH_PASSWORD: admin
-            ME_CONFIG_MONGODB_PORT: 27017
-            TZ: Europe/London
-        volumes:
-            - ./input/database/mongo/init:/docker-entrypoint-initdb.d:ro
-            - ./input/logs/mongo/mongo-service:/var/log/mongodb:rw
-        networks:
-            - stack
-        ports:
-            - 27017:27017
-        restart: on-failure
-        
-    mongo-express:
-        image: mongo-express:0.54.0
-        container_name: mongo-express
-        hostname: mongo-express
-        environment:
-            ME_CONFIG_MONGODB_ADMINUSERNAME: root
-            ME_CONFIG_MONGODB_ADMINPASSWORD: root
-            TZ: Europe/London
-        networks:
-            - stack
-        ports:
-            - 8081:8081
-        depends_on:
-            - mongodb
-        restart: on-failure
+#    adminer:
+#        image: adminer:4.7.7
+#        container_name: adminer
+#        hostname: adminer
+#        environment:
+#            ADMINER_DEFAULT_SERVER: mysql
+#        networks:
+#            - stack
+#        ports:
+#            - 8080:8080
+#        depends_on:
+#            - mysql
+#        restart: on-failure
+#        
+#    mongodb:
+#        image: mongo:4.2.6
+#        container_name: mongodb
+#        hostname: mongodb
+#        environment:
+#            MONGO_INITDB_ROOT_USERNAME: root
+#            MONGO_INITDB_ROOT_PASSWORD: root
+#            ME_CONFIG_BASICAUTH_USERNAME: admin
+#            ME_CONFIG_BASICAUTH_PASSWORD: admin
+#            ME_CONFIG_MONGODB_PORT: 27017
+#            TZ: Europe/London
+#        volumes:
+#            - ./input/database/mongo/init:/docker-entrypoint-initdb.d:ro
+#            - ./input/logs/mongo/mongo-service:/var/log/mongodb:rw
+#        networks:
+#            - stack
+#        ports:
+#            - 27017:27017
+#        restart: on-failure
+#        
+#    mongo-express:
+#        image: mongo-express:0.54.0
+#        container_name: mongo-express
+#        hostname: mongo-express
+#        environment:
+#            ME_CONFIG_MONGODB_ADMINUSERNAME: root
+#            ME_CONFIG_MONGODB_ADMINPASSWORD: root
+#            TZ: Europe/London
+#        networks:
+#            - stack
+#        ports:
+#            - 8081:8081
+#        depends_on:
+#            - mongodb
+#        restart: on-failure
 
 volumes:
     es_data:
