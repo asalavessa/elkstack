@@ -92,10 +92,10 @@ filebeat.modules:
 - module: nginx
   access:
     enabled: true
-    var.paths: ["/home/sample-app/todolist-app/var/log/nginx/access.log"]
+    var.paths: ["/home/sample-app/todolist-app/log/nginx/access.log"]
   error:
     enabled: true
-    var.paths: ["/home/sample-app/todolist-app/var/log/nginx/error.log"]
+    var.paths: ["/home/sample-app/todolist-app/log/nginx/error.log"]
 
 # ============================== Filebeat inputs ===============================
 
