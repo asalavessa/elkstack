@@ -87,7 +87,7 @@ services:
     metricbeat:
         image: elastic/metricbeat:7.13.4
         container_name: metricbeat
-        hostname: filebeat
+        hostname: metricbeat
         user: root
         volumes:
             - /:/hostfs:ro
