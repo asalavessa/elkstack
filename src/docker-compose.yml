@@ -1,0 +1,203 @@
+#this.elk.docker v0.6.3
+version: '3.7'
+
+services:
+  elasticsearch:
+    image: elasticsearch:7.8.0
+    container_name: elasticsearch
+    hostname: elasticsearch
+    environment:
+      cluster.name: "thiselkdocker"
+      network.host: 0.0.0.0z
+      xpack.license.self_generated.type: trial
+      xpack.security.enabled: true
+      xpack.monitoring.collection.enabled: true
+    environment:
+      ES_JAVA_OPTS: "-Xmx512m -Xms256m"
+      ELASTIC_PASSWORD: elastic
+      discovery.type: single-node
+      TZ: Europe/London
+    volumes:
+      - elasticsearchV:/usr/share/elasticsearch/data
+    networks:
+      elk:
+    ports:
+      - 9200:9200
+    restart: on-failure
+
+  kibana:
+    image: kibana:7.8.0
+    container_name: kibana
+    hostname: kibana
+    environment:
+      ES_JAVA_OPTS: "-Xmx512m -Xms256m"
+      TZ: Europe/London
+    volumes:
+      - ./configs/yaml/kibana.yml:/usr/share/kibana/config/kibana.yml:ro
+      - kibanaV:/usr/share/kibana/data
+    networks:
+      elk:
+    ports:
+      - 5601:5601
+    depends_on:
+      - elasticsearch
+    restart: on-failure
+
+  logstash:
+    image: logstash:7.8.0
+    container_name: logstash
+    hostname: logstash
+    environment:
+      http.host: "0.0.0.0"
+      xpack.monitoring.elasticsearch.hosts: "http://elasticsearch:9200"
+      xpack.monitoring.elasticsearch.username: elastic
+      xpack.monitoring.elasticsearch.password: elastic
+      xpack.monitoring.enabled: true
+    environment:
+      LS_JAVA_OPTS: "-Xmx512m -Xms256m"
+      TZ: Europe/London
+    volumes:
+      - ./configs/logstash.conf:/usr/share/logstash/pipeline/logstash.conf:ro
+      - ./configs/driver:/usr/share/empty:ro
+      - ./configs/plugin:/home
+      - ./input/files:/usr/tmp:ro
+      - ./input/database/mongo/temp:/opt:rw
+    command: bash -c "bin/logstash-plugin install /home/logstash-input-mongodb-0.4.2.3.gem && logstash -f /usr/share/logstash/pipeline/logstash.conf"
+    networks:
+      elk:
+    ports:
+      - "5000:5000/tcp"
+      - "5000:5000/udp"
+    depends_on:
+      - elasticsearch
+    restart: on-failure
+
+  filebeat:
+    image: elastic/filebeat:7.8.0
+    container_name: filebeat
+    hostname: filebeat
+    user: root
+    volumes:
+      - ./configs/yaml/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      - ./input/logs:/var/log
+    command: ["-strict.perms=false"]
+    environment:
+      TZ: Europe/London
+    networks:
+      elk:
+    depends_on:
+      - elasticsearch
+      - kibana
+    restart: on-failure
+
+  metricbeat:
+    image: elastic/metricbeat:7.8.0
+    container_name: metricbeat
+    hostname: metricbeat
+    user: root
+    volumes:
+      - /:/hostfs:ro
+      - /proc:/hostfs/proc:ro
+      - /sys/fs/cgroup:/hostfs/sys/fs/cgroup:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./configs/yaml/metricbeat.yml:/usr/share/metricbeat/metricbeat.yml:ro
+    command: ["--strict.perms=false", "-system.hostfs=/hostfs"]
+    environment:
+      TZ: Europe/London
+    networks:
+      elk:
+    depends_on:
+      - elasticsearch
+      - kibana
+    restart: on-failure
+
+  logspout:
+    image: bekt/logspout-logstash
+    container_name: logspout
+    hostname: logspout
+    environment:
+      ROUTE_URIS: logstash://logstash:5000
+      TZ: Europe/London
+    volumes:
+       - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      elk:
+    depends_on:
+      - logstash
+    restart: on-failure
+
+  mysql:
+    image: mysql:8.0.20
+    container_name: mysql
+    hostname: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      TZ: Europe/London
+    volumes:
+      - ./input/database/mysql:/docker-entrypoint-initdb.d:ro
+      - ./input/logs/mysql/mysql-service:/var/log:ro
+    networks:
+      elk:
+    ports:
+      - 3306:3306
+    restart: on-failure
+
+  adminer:
+    image: adminer:4.7.7
+    container_name: adminer
+    hostname: adminer
+    environment:
+      ADMINER_DEFAULT_SERVER: mysql
+    networks:
+      elk:
+    ports:
+      - 8080:8080
+    depends_on:
+      - mysql
+    restart: on-failure
+
+  mongo:
+    image: mongo:4.2.6
+    container_name: mongo
+    hostname: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+      ME_CONFIG_BASICAUTH_USERNAME: admin
+      ME_CONFIG_BASICAUTH_PASSWORD: admin
+      ME_CONFIG_MONGODB_PORT: 27017
+      TZ: Europe/London
+    volumes:
+      - ./input/database/mongo/init:/docker-entrypoint-initdb.d:ro
+      - ./input/logs/mongo/mongo-service:/var/log/mongodb:rw
+    networks:
+      elk:
+    ports:
+      - 27017:27017
+    restart: on-failure
+
+  mongo-express:
+    image: mongo-express:0.54.0
+    container_name: mongo-express
+    hostname: mongo-express
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: root
+      TZ: Europe/London
+    networks:
+      elk:
+    ports:
+      - 8081:8081
+    depends_on:
+      - mongo
+    restart: on-failure
+
+networks:
+  elk:
+    driver: bridge
+
+
+volumes:
+  elasticsearchV:
+  kibanaV:
+

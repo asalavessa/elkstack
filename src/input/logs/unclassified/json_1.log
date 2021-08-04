@@ -1,0 +1,4 @@
+{"http_user_agent": "ELB-HealthChecker/1.0", "status": 200}
+{"http_user_agent": "ELB-HealthChecker/1.0", "status": 404}
+{"http_user_agent": "ELB-Eureka/4.1.1", "status": 707}
+

@@ -1,0 +1,15 @@
+# Default Kibana configuration for docker target
+server.name: kibana
+server.host: "0"
+elasticsearch.hosts: "http://elasticsearch:9200"
+elasticsearch.username: elastic
+elasticsearch.password: elastic
+xpack.monitoring.ui.container.elasticsearch.enabled: true
+
+xpack.encryptedSavedObjects.encryptionKey: 1ud74if93yf75l20sodjg9ty57ftry5u
+
+# Dark Mode
+uiSettings:
+  overrides:
+    "theme:darkMode": true   
+
