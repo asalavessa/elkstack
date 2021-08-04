@@ -3,7 +3,7 @@ version: '3.7'
 
 services:
   elasticsearch:
-    image: elasticsearch:7.14.0
+    image: elasticsearch:7.8.0
     container_name: elasticsearch
     hostname: elasticsearch
     environment:
@@ -26,7 +26,7 @@ services:
     restart: on-failure
 
   kibana:
-    image: kibana:7.14.0
+    image: kibana:7.8.0
     container_name: kibana
     hostname: kibana
     environment:
@@ -44,7 +44,7 @@ services:
     restart: on-failure
 
   logstash:
-    image: logstash:7.14.0
+    image: logstash:7.8.0
     container_name: logstash
     hostname: logstash
     environment:
@@ -73,7 +73,7 @@ services:
     restart: on-failure
 
   filebeat:
-    image: elastic/filebeat:7.14.0
+    image: elastic/filebeat:7.8.0
     container_name: filebeat
     hostname: filebeat
     user: root
@@ -91,7 +91,7 @@ services:
     restart: on-failure
 
   metricbeat:
-    image: elastic/metricbeat:7.14.0
+    image: elastic/metricbeat:7.8.0
     container_name: metricbeat
     hostname: metricbeat
     user: root
