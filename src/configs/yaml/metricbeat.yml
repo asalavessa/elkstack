@@ -27,7 +27,7 @@ metricbeat.modules:
 
 #------------------------------- Nginx Module ---------------------------------
 
-  - module: nginx
+- module: nginx
   metricsets: ["stubstatus"]
   enabled: true
   period: 5s
