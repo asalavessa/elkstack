@@ -29,12 +29,14 @@ metricbeat.modules:
 #========================== Elasticsearch output =============================
 output.elasticsearch:
   hosts: "elasticsearch:9200"
-
+  username: elastic
+  password: elastic
 
 #============================== Kibana =========================================
 setup.kibana:
   host: "kibana:5601"
-
+  username: elastic
+  password: elastic
   
 #============================== Dashboards =====================================
 # These settings control loading the sample dashboards to the Kibana index. Loading

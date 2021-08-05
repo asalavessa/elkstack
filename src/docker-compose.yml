@@ -9,6 +9,9 @@ services:
     environment:
       cluster.name: "thiselkdocker"
       xpack.license.self_generated.type: trial
+      xpack.security.enabled: true
+      ELASTIC_PASSWORD: elastic
+      ELASTIC_USERNAME: elastic
     environment:
       ES_JAVA_OPTS: "-Xmx1024m -Xms1024m"
       discovery.type: single-node
@@ -28,6 +31,8 @@ services:
     environment:
       ES_JAVA_OPTS: "-Xmx1024m -Xms1024m"
       TZ: Europe/London
+      ELASTIC_PASSWORD: elastic
+      ELASTIC_USERNAME: elastic
     volumes:
       - ./configs/yaml/kibana.yml:/usr/share/kibana/config/kibana.yml:ro
       - kibana:/usr/share/kibana/data
@@ -52,6 +57,8 @@ services:
     environment:
       LS_JAVA_OPTS: "-Xmx1024m -Xms1024m"
       TZ: Europe/London
+      ELASTIC_PASSWORD: elastic
+      ELASTIC_USERNAME: elastic
     volumes:
       - ./configs/logstash.conf:/usr/share/logstash/pipeline/logstash.conf:ro
       - ./configs/driver:/usr/share/empty:ro
@@ -80,6 +87,8 @@ services:
     command: ["-strict.perms=false"]
     environment:
       TZ: Europe/London
+      ELASTIC_PASSWORD: elastic
+      ELASTIC_USERNAME: elastic
     networks:
       - stack
     depends_on:
@@ -101,6 +110,8 @@ services:
     command: ["--strict.perms=false", "-system.hostfs=/hostfs"]
     environment:
       TZ: Europe/London
+      ELASTIC_PASSWORD: elastic
+      ELASTIC_USERNAME: elastic
     networks:
       - stack
     depends_on:
@@ -115,6 +126,8 @@ services:
     environment:
       ROUTE_URIS: logstash://logstash:5000
       TZ: Europe/London
+      ELASTIC_PASSWORD: elastic
+      ELASTIC_USERNAME: elastic
     volumes:
        - /var/run/docker.sock:/var/run/docker.sock:ro
     networks:
