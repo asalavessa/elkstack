@@ -52,7 +52,7 @@ metricbeat.autodiscover:
     - type: docker
       templates:
         - condition:
-            equals:
+            contains:
               docker.container.image: todolist-app_frontend
           config:
             - module: nginx

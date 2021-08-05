@@ -103,7 +103,7 @@ services:
       - /sys/fs/cgroup:/hostfs/sys/fs/cgroup:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./configs/yaml/metricbeat.yml:/usr/share/metricbeat/metricbeat.yml:ro
-    command: ["--strict.perms=false", "-system.hostfs=/hostfs"]
+    command: ["-e", --strict.perms=false", "-system.hostfs=/hostfs"]
     environment:
       TZ: Europe/London
       ELASTIC_PASSWORD: elastic
