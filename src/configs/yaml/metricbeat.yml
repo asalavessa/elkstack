@@ -57,4 +57,4 @@ metricbeat.autodiscover:
           config:
             - module: nginx
               metricsets: ["stubstatus"]
-              hosts: "${data.host}:4200"
+              hosts: "127.0.0.1:4200"
