@@ -133,8 +133,6 @@ filebeat.inputs:
 #==================== Elasticsearch template setting ==========================
 output.elasticsearch:
   hosts: ["elasticsearch:9200"]
-  username: elastic
-  password: elastic
 
 #============================== Kibana =========================================
 setup.kibana:
