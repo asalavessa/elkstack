@@ -128,9 +128,8 @@ output.elasticsearch:
 
 #============================== Kibana =========================================
 setup.kibana:
-  host: ["kibana:5601"]
-  username: elastic
-  password: elastic
+  host: "kibana:5601"
+
 
 #============================== Dashboards =====================================
 # These settings control loading the sample dashboards to the Kibana index. Loading

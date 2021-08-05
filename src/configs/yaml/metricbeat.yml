@@ -25,33 +25,16 @@ metricbeat.modules:
   enabled: true
   period: 10s
   
-#------------------------------- MySQL Module -------------------------------
-- module: mysql
-  enabled: true
-  metricsets: ["status"]
-  period: 10s
-  hosts: ["tcp(mysql:3306)/"]
-  username: root
-  password: root
-
-#------------------------------- MongoDB Module -------------------------------
-- module: mongodb
-  enabled: true
-  metricsets: ["status", "dbstats"]
-  period: 10s
-  hosts: ["mongodb:27017"]
     
 #========================== Elasticsearch output =============================
 output.elasticsearch:
-  hosts: ["elasticsearch:9200"]
-  username: elastic
-  password: elastic
+  hosts: "elasticsearch:9200"
+
 
 #============================== Kibana =========================================
 setup.kibana:
-  host: ["kibana:5601"]
-  username: elastic
-  password: elastic
+  host: "kibana:5601"
+
   
 #============================== Dashboards =====================================
 # These settings control loading the sample dashboards to the Kibana index. Loading
