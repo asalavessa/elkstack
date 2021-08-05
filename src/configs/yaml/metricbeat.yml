@@ -49,7 +49,7 @@ output.elasticsearch:
 
 #============================== Kibana =========================================
 setup.kibana:
-  host: "kibana:5601"
+  host: ["kibana:5601"]
   username: elastic
   password: elastic
   
