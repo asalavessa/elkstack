@@ -59,3 +59,17 @@ setup.kibana:
 # options here, or by using the `-setup` CLI flag.
 setup.dashboards.enabled: true
 
+
+#============================== Autodiscover =====================================
+
+metricbeat.autodiscover:
+  providers:
+    - type: docker
+      templates:
+        - condition:
+            contains:
+              docker.container.image: todolist-app_frontend
+          config:
+            - module: nginx
+              metricsets: ["stubstatus"]
+              hosts: "${data.host}:${data.port}"

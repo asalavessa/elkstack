@@ -138,3 +138,25 @@ setup.kibana:
 # options here, or by using the `-setup` CLI flag.
 setup.dashboards.enabled: true
 
+
+#============================== Autodiscover =====================================
+
+filebeat.autodiscover:
+ providers:
+   - type: docker
+     templates:
+       - condition:
+         contains:
+           docker.container.image: todolist-app_frontend
+         config:
+           - module: nginx
+             access:
+               input:
+                 type: docker
+                 containers.ids:
+                   - "${data.docker.container.id}"
+             error:
+               input:
+                 type: docker
+                 containers.ids:
+                   - "${data.docker.container.id}"
