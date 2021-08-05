@@ -4,7 +4,6 @@ server.host: "0"
 elasticsearch.hosts: "http://elasticsearch:9200"
 elasticsearch.username: elastic
 elasticsearch.password: elastic
-
 xpack.monitoring.ui.container.elasticsearch.enabled: true
 
 #xpack.encryptedSavedObjects.encryptionKey: 1ud74if93yf75l20sodjg9ty57ftry5u

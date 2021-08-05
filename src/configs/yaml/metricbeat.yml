@@ -28,7 +28,7 @@ metricbeat.modules:
     
 #========================== Elasticsearch output =============================
 output.elasticsearch:
-  hosts: "elasticsearch:9200"
+  hosts: ["elasticsearch:9200"]
   username: elastic
   password: elastic
 

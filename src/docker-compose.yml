@@ -8,18 +8,17 @@ services:
     hostname: elasticsearch
     environment:
       cluster.name: "thiselkdocker"
+      network.host: 0.0.0.0z
       xpack.license.self_generated.type: trial
       xpack.security.enabled: true
       ELASTIC_PASSWORD: elastic
-      ELASTIC_USERNAME: elastic
-    environment:
       ES_JAVA_OPTS: "-Xmx1024m -Xms1024m"
       discovery.type: single-node
       TZ: Europe/London
     volumes:
       - elasticsearch:/usr/share/elasticsearch/data
     networks:
-      - stack
+      elk:
     ports:
       - 9200:9200
     restart: on-failure
@@ -31,13 +30,11 @@ services:
     environment:
       ES_JAVA_OPTS: "-Xmx1024m -Xms1024m"
       TZ: Europe/London
-      ELASTIC_PASSWORD: elastic
-      ELASTIC_USERNAME: elastic
     volumes:
       - ./configs/yaml/kibana.yml:/usr/share/kibana/config/kibana.yml:ro
       - kibana:/usr/share/kibana/data
     networks:
-      - stack
+      elk:
     ports:
       - 5601:5601
     depends_on:
@@ -67,7 +64,7 @@ services:
       - ./input/database/mongo/temp:/opt:rw
     command: bash -c "bin/logstash-plugin install /home/logstash-input-mongodb-0.4.2.3.gem && logstash -f /usr/share/logstash/pipeline/logstash.conf"
     networks:
-      - stack
+      elk:
     ports:
       - "5000:5000/tcp"
       - "5000:5000/udp"
@@ -87,10 +84,8 @@ services:
     command: ["-strict.perms=false"]
     environment:
       TZ: Europe/London
-      ELASTIC_PASSWORD: elastic
-      ELASTIC_USERNAME: elastic
     networks:
-      - stack
+      elk:
     depends_on:
       - elasticsearch
       - kibana
@@ -113,7 +108,7 @@ services:
       ELASTIC_PASSWORD: elastic
       ELASTIC_USERNAME: elastic
     networks:
-      - stack
+      elk:
     depends_on:
       - elasticsearch
       - kibana
@@ -131,14 +126,14 @@ services:
     volumes:
        - /var/run/docker.sock:/var/run/docker.sock:ro
     networks:
-      - stack
+      elk:
     depends_on:
       - logstash
     restart: on-failure
 
 
 networks:
-  stack:
+  elk:
     driver: bridge
 
 
