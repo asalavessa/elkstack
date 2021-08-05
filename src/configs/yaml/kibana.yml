@@ -5,7 +5,7 @@ elasticsearch.hosts: "http://elasticsearch:9200"
 
 xpack.monitoring.ui.container.elasticsearch.enabled: true
 
-xpack.encryptedSavedObjects.encryptionKey: 1ud74if93yf75l20sodjg9ty57ftry5u
+#xpack.encryptedSavedObjects.encryptionKey: 1ud74if93yf75l20sodjg9ty57ftry5u
 
 # Dark Mode
 uiSettings:
