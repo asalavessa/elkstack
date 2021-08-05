@@ -142,21 +142,28 @@ setup.dashboards.enabled: true
 #============================== Autodiscover =====================================
 
 filebeat.autodiscover:
- providers:
-   - type: docker
-     templates:
-       - condition:
-         contains:
-           docker.container.image: todolist-app_frontend
-         config:
-           - module: nginx
-             access:
-               input:
-                 type: docker
-                 containers.ids:
-                   - "${data.docker.container.id}"
-             error:
-               input:
-                 type: docker
-                 containers.ids:
-                   - "${data.docker.container.id}"
+  providers:
+    - type: docker
+      hints.enabled: true
+      templates:
+        - condition:
+            contains:
+              docker.container.name: "todolist-app_frontend"
+          config:
+            - module: nginx
+              access:
+                enabled: true
+                var.paths: ["/var/log/nginx/access.log"]
+                input:
+                  type: docker
+                  containers:
+                    ids: "${data.docker.container.id}"
+                    stream: "stdout"
+              error:
+                enabled: true
+                var.paths: var.paths: ["/var/log/nginx/error.log"]
+                input:
+                  type: docker
+                  containers:
+                    ids: "${data.docker.container.id}"
+                    stream: "stderr"

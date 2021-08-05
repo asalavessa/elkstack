@@ -80,7 +80,8 @@ services:
     volumes:
       - ./configs/yaml/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
       - ./input/logs:/var/log
-    command: ["-strict.perms=false"]
+      - /home/sample-app/todolist-app/log/nginx/:/var/log/nginx
+    command: ["-e", "-strict.perms=false"]
     environment:
       TZ: Europe/London
     networks:
@@ -101,7 +102,7 @@ services:
       - /sys/fs/cgroup:/hostfs/sys/fs/cgroup:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./configs/yaml/metricbeat.yml:/usr/share/metricbeat/metricbeat.yml:ro
-    command: ["--strict.perms=false", "-system.hostfs=/hostfs"]
+    command: ["-e", "--strict.perms=false", "-system.hostfs=/hostfs"]
     environment:
       TZ: Europe/London
     networks:
