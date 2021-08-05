@@ -9,11 +9,6 @@ docker-compose --version
 firefox --version
 ```
 
-### **Download `this.elk.docker` repository:** 
-```sh
-git clone -b development http://192.168.7.5:7983/scm/eflog/this.elk.docker.git 
-cd this.elk.docker/src/
-```
 
 ### **`this.elk.docker` structure:**	
 ```sh
