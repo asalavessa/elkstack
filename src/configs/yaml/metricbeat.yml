@@ -30,10 +30,13 @@ metricbeat.modules:
 - module: nginx
   metricsets: ["stubstatus"]
   enabled: true
-  period: 5s
+  period: 10s
 
   # Nginx hosts
-  hosts: ["127.0.0.1"]
+  hosts: ["http://127.0.0.1"]
+
+  # Path to server status. Default server-status
+  server_status_path: "server-status"
     
 #========================== Elasticsearch output =============================
 output.elasticsearch:
