@@ -11,6 +11,7 @@ services:
       network.host: 0.0.0.0z
       xpack.license.self_generated.type: trial
       xpack.security.enabled: true
+    environment:
       ELASTIC_PASSWORD: elastic
       ES_JAVA_OPTS: "-Xmx1024m -Xms1024m"
       discovery.type: single-node
