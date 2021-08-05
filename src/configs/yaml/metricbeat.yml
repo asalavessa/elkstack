@@ -1,14 +1,22 @@
 metricbeat.modules:
 
-#------------------------------- System Module -------------------------------
+#------------------------------- System Module - no CPU -------------------------------
 - module: system
-  metricsets: ["cpu", "load", "filesystem", "fsstat", "memory", "network", "process", "core", "diskio", "socket"]
+  metricsets: ["load", "filesystem", "fsstat", "memory", "network", "process", "core", "diskio", "socket"]
   period: 10s
   enabled: true
   processes: ['.*']
 
   cpu.metrics:  ["percentages"]
   core.metrics: ["percentages"]
+
+#------------------------------- System Module - CPU -------------------------------
+- module: system
+  metricsets: ["cpu"]
+  period: 1s
+  enabled: true
+
+  cpu.metrics: [percentages, normalized_percentages, ticks]
 
 #------------------------------- Docker Module -------------------------------
 - module: docker
