@@ -24,7 +24,16 @@ metricbeat.modules:
   hosts: ["unix:///var/run/docker.sock"]
   enabled: true
   period: 10s
-  
+
+#------------------------------- Nginx Module ---------------------------------
+
+  - module: nginx
+  metricsets: ["stubstatus"]
+  enabled: true
+  period: 5s
+
+  # Nginx hosts
+  hosts: ["127.0.0.1"]
     
 #========================== Elasticsearch output =============================
 output.elasticsearch:
