@@ -37,6 +37,17 @@ metricbeat.modules:
 
   # Path to server status. Default server-status
   server_status_path: "server-status"
+
+#------------------------------- MongoDB Module ---------------------------------
+
+- module: mongodb
+  metricsets: ["dbstats", "status", "collstats", "metrics", "replstatus"]
+  period: 10s
+  enabled: true
+  hosts: ["mongodb://admin:admin@mongo:27017/todolist?authSource=admin]
+
+
+
     
 #========================== Elasticsearch output =============================
 output.elasticsearch:
