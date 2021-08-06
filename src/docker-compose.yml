@@ -82,6 +82,7 @@ services:
       - ./configs/yaml/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
       - ./input/logs:/var/log
       - /home/todolist-app/log/nginx/:/var/log/nginx
+      - /home/todolist-app/log/mongo/:/var/log/mongo
     command: ["-strict.perms=false"]
     environment:
       TZ: Europe/London
