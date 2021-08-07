@@ -193,4 +193,4 @@ docker-compose logs -f #Use Ctrl+C to exit.
 * Menu > Management > Stack Management >  [Saved Objects](http://172.16.238.3:5601/app/kibana#/management/kibana/objects)
 	* Search... > `Generic Dashboard` > **Export** > Export
 	* **Import** > Import > `Generic Dashboard.ndjson` > Import > Done
-
+	* 
