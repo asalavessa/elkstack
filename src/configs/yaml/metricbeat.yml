@@ -45,6 +45,7 @@ metricbeat.modules:
   period: 10s
   enabled: true
   hosts: ["mongodb://beats:pass@mongo:27017/test?authSource=test"]
+  
 
     
 #========================== Elasticsearch output =============================
