@@ -74,7 +74,11 @@ metricbeat.autodiscover:
         - condition:
             contains:
               docker.container.image: todolist-app_frontend
+              docker.container.image: mongo
           config:
             - module: nginx
               metricsets: ["stubstatus"]
               hosts: "${data.host}:${data.port}"
+            - module: mongodb
+              metricsets: ["dbstats", "status", "collstats", "metrics", "replstatus"]
+              hosts: ["mongodb://metricsnew:metricsnew@20.56.66.245:27017/todolist?authSource=admin"]
