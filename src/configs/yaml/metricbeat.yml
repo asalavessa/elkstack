@@ -81,4 +81,4 @@ metricbeat.autodiscover:
               hosts: "${data.host}:${data.port}"
             - module: mongodb
               metricsets: ["dbstats", "status", "collstats", "metrics", "replstatus"]
-              hosts: ["mongodb://metricsnew:metricsnew@mongo:27017/todolist?authSource=admin"]
+              hosts: ["mongodb://metricsnew:metricsnew@localhost:27017/todolist?authSource=admin"]
