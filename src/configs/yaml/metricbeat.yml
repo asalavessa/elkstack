@@ -44,7 +44,7 @@ metricbeat.modules:
   metricsets: ["dbstats", "status", "collstats", "metrics", "replstatus"]
   period: 10s
   enabled: true
-  hosts: ["mongodb://admin:admin@20.56.66.245:27017/test?authSource=admin?connectTimeoutMS=30000&socketTimeoutMS=30000&waitQueueTimeoutMS=30000&maxIdleTimeMS=45000"]
+  hosts: ["mongodb://admin:admin@20.56.66.245:27017/test?authSource=admin"]
 
     
 #========================== Elasticsearch output =============================
