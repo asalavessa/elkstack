@@ -45,8 +45,6 @@ metricbeat.modules:
   period: 10s
   enabled: true
   hosts: ["mongodb://admin:admin@mongo:27017/todolist?authSource=admin", "mongo:27017"]
-
-
     
 #========================== Elasticsearch output =============================
 output.elasticsearch:
