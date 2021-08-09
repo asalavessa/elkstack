@@ -147,12 +147,3 @@ volumes:
     driver: local
   kibana:
     driver: local
-
-
-db.createUser(
-    {
-        user: "beats",
-        pwd: "pass",
-        roles: ["clusterMonitor"]
-    }
-)
