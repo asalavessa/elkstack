@@ -42,11 +42,13 @@ metricbeat.modules:
 
 - module: mongodb
   metricsets: ["dbstats", "status", "collstats", "metrics", "replstatus"]
+  hosts: ["mongo:27017"]
+  username: beats
+  password: pass
   period: 10s
   enabled: true
-  hosts: ["mongodb://beats:pass@mongo:27017"]
 
-    
+
 #========================== Elasticsearch output =============================
 output.elasticsearch:
   hosts: ["elasticsearch:9200"]
