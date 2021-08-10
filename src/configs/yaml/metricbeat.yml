@@ -44,7 +44,7 @@ metricbeat.modules:
   metricsets: ["dbstats", "status", "collstats", "metrics", "replstatus"]
   period: 10s
   enabled: true
-  hosts: ["mongodb://admin:admin@20.56.66.245:27017"]
+  hosts: ["mongodb://admin:admin@0.0.0.0:27017/todolist?authSource=admin"]
     
 #========================== Elasticsearch output =============================
 output.elasticsearch:
@@ -81,4 +81,4 @@ metricbeat.autodiscover:
               hosts: "${data.host}:${data.port}"
             - module: mongodb
               metricsets: ["dbstats", "status", "collstats", "metrics", "replstatus"]
-              hosts: ["mongodb://admin:admin@20.56.66.245:27017"]
+              hosts: ["mongodb://admin:admin@0.0.0.0:27017/todolist?authSource=admin"]
